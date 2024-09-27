@@ -1,0 +1,34 @@
+{
+    "facebook": {
+        "icon": "bi bi-facebook",
+        "url": ""
+    },
+    "instagram": {
+        "icon": "bi bi-instagram",
+        "url": ""
+    },
+    "twitter": {
+        "icon": "bi bi-twitter-x",
+        "url": ""
+    },
+    "whatsapp": {
+        "icon": "bi bi-whatsapp",
+        "url": ""
+    },
+    "linkedin": {
+        "icon": "bi bi-linkedin",
+        "url": "https://www.linkedin.com/in/gopal-rana-820a4862"
+    },
+    "github": {
+        "icon": "bi bi-github",
+        "url": "https://github.com/gopalubt"
+    },
+    "gitlab": {
+        "icon": "bi bi-gitlab",
+        "url": ""
+    },
+    "youtube": {
+        "icon": "",
+        "url": ""
+    }
+}

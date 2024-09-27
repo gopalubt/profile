@@ -1,0 +1,84 @@
+{
+    "personal_info": {
+      "name": "Gopal Singh Rana",
+      "title": "Front-end Developer",
+      "email": "ranagopal29@gmail.com",
+      "phone": "+91 8889705044",
+      "address": "Noida, India",
+      "linkedin": "https://www.linkedin.com/in/gopal-rana-820a4862/",
+      "github": "https://github.com/gopalubt"
+    },
+    "summary": "Experienced front-end developer with over 3 years of expertise in building dynamic, responsive web applications using Angular, JavaScript, HTML, and CSS. Proficient in modern web technologies and focused on delivering clean, efficient, and user-friendly solutions.",
+    "experience": [
+      {
+        "position": "Front-end Developer",
+        "company": "Tech Solutions Ltd",
+        "location": "City, State",
+        "start_date": "2022-01-01",
+        "end_date": "Present",
+        "responsibilities": [
+          "Developed and maintained Angular applications with a focus on responsive design and performance.",
+          "Collaborated with UX/UI teams to enhance the user experience.",
+          "Implemented reusable components and services using Angular 17.",
+          "Optimized loading times and improved overall site performance."
+        ]
+      },
+      {
+        "position": "Junior Web Developer",
+        "company": "Web Innovators",
+        "location": "City, State",
+        "start_date": "2020-06-01",
+        "end_date": "2021-12-31",
+        "responsibilities": [
+          "Assisted in developing and maintaining client websites using HTML, CSS, and JavaScript.",
+          "Worked with a team to design and implement new features.",
+          "Ensured cross-browser compatibility and responsive designs."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Technology in Biotechnology",
+        "institution": "University Name",
+        "location": "City, State",
+        "start_date": "2015-08-01",
+        "end_date": "2019-05-31"
+      }
+    ],
+    "skills": [
+      "Angular 17",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "TypeScript",
+      "SCSS",
+      "RxJS",
+      "Bootstrap 5",
+      "PrimeNG",
+      "Node.js"
+    ],
+    "projects": [
+      {
+        "name": "Freelancing Website",
+        "description": "Developed a freelancing website using Angular 17 for front-end and Node.js for the backend, handling user registration, project posting, and payments.",
+        "technologies": ["Angular", "Node.js", "Express", "MongoDB"]
+      },
+      {
+        "name": "Vercel Serverless API",
+        "description": "Created a serverless API using Vercel and Node.js for managing form submissions and data processing.",
+        "technologies": ["Node.js", "Vercel", "Express"]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "JavaScript Advanced Concepts",
+        "institution": "Udemy",
+        "date": "2023-03-01"
+      }
+    ],
+    "languages": [
+      "English",
+      "Hindi"
+    ]
+  }
+  
