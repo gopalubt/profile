@@ -46,17 +46,33 @@
       }
     ],
     "skills": [
-      "Angular 17",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "TypeScript",
-      "SCSS",
-      "RxJS",
-      "Bootstrap 5",
-      "PrimeNG",
-      "Node.js"
-    ],
+      {
+          "label": "Angular 17",
+          "thumb": "/assets/images/angular.svg",
+          "proficiency": "75%"
+      },
+      {
+          "label": "Vue JS",
+          "thumb": "/assets/images/vuejs-colored.svg",
+          "proficiency": "60%"
+      },
+     
+      {
+        "label": "NodeJs",
+        "thumb": "/assets/images/nodejs-colored.svg",
+        "proficiency": ""
+      },
+      {
+        "label": "MongoDB",
+        "thumb": "/assets/images/mongodb-colored.svg",
+        "proficiency": "60%"
+      },
+      {
+        "label": "MongoDB",
+        "thumb": "/assets/images/mongodb-colored.svg",
+        "proficiency": "60%"
+      }
+  ],
     "projects": [
       {
         "name": "Freelancing Website",

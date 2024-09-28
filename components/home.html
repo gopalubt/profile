@@ -1,0 +1,20 @@
+<div id="content"></div>
+
+<script>
+    
+    // Function to load HTML file and render its content
+    async function loadHTML(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            const html = await response.text(); // Get the HTML text
+            document.getElementById('content').innerHTML = html; // Insert HTML into the DOM
+        } catch (error) {
+            console.error('Error fetching HTML:', error);
+        }
+    }
+
+    // Load the content.html file
+    loadHTML('./public/home.html');
+</script>

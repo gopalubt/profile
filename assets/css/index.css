@@ -47,7 +47,7 @@ body{
 .fs-sm{ font-size: 16px !important; line-height:135% }
 .fs-normal{ font-size: 18px !important; line-height:135% }
 .fs-md{ font-size: 23px !important; line-height:135% }
-.fs-lg{ font-size: 29px !important; line-height:135% }
+.fs-lg{ font-size: 30px !important; line-height:135% }
 .fs-xl{ font-size: 35px !important; line-height:135% }
 .fs-xxl{ font-size: 48px !important; line-height:135% }
 
@@ -101,4 +101,8 @@ footer .nav-link:focus, footer .nav-link:hover{
     text-decoration: underline;
     text-underline-offset: 2px;
     text-decoration-color: inherit;
+}
+.skills-icon{
+    width: 60px;
+    height: auto
 }
