@@ -2,23 +2,8 @@ const app = {
     htmlText: null,
     virtualDOM: null,
     resume: null,
-    directives: [
-        'data-gp-html',
-        'data-gp-for',
-        'data-gp-src',
-        'data-gp-link',
-        'data-gp-alt'
-    ],
-    
-    templates: {
-        html: [],
-        for: [],
-        src: [],
-        link: [],
-        alt: []
-    },
-    
-    // Load the content.html file and resume data
+    directives: ['data-gp-html', 'data-gp-for', 'data-gp-src', 'data-gp-link', 'data-gp-alt'],
+    templates: { html: [],for: [], src: [], link: [],alt: [] },
     async loadApp() {
         try {
             await this.loadHTML('./public/home.html'); 
@@ -31,7 +16,6 @@ const app = {
             
         } catch (error) {
             console.error("Error:", error.message);
-            // You could also add user feedback here
         }
     },
     
@@ -58,9 +42,15 @@ const app = {
     },
 
     async fetchResume() {
-        const res = await fetch('/assets/data/resume.json');
-        if (!res.ok) throw new Error("An error occurred while fetching the resume.");
-        return res.json();
+        try {
+            const res = await fetch('/assets/data/resume.json');
+            if (!res.ok) throw new Error("An error occurred while fetching the resume.");
+            return res.json();
+        } catch (error) {
+            console.log(error)
+            return null
+        }
+        
     },
 
     setDocumentLoops() {
@@ -96,6 +86,7 @@ const app = {
             this.setDOMElement('innerHTML', ele, dataKey, data);
         });
     },
+
     setDOMImgScr(template, data) {
         const htmlElements = template.querySelectorAll("[data-gp-src]");
         htmlElements.forEach(ele => {
@@ -122,19 +113,19 @@ const app = {
                 break;
             } 
         }
-        this.removeDataAttribute(attribute, element);
+        // this.removeDataAttribute(attribute, element);
         element[attribute] = data !== null && data !== undefined ? data : '';
     },
 
-    removeDataAttribute(attribute, element){
-        let attrMap= {
-            'src':"[data-gp-src]",
-            'alt':"[data-gp-alt]",
-            'link':"[data-gp-link]",
-            'innerHTML':"[data-gp-html]",
-        }
-        element.removeAttribute(attrMap[attribute]);
-    },
+    // removeDataAttribute(attribute, element){
+    //     let attrMap= {
+    //         'src':"[data-gp-src]",
+    //         'alt':"[data-gp-alt]",
+    //         'link':"[data-gp-link]",
+    //         'innerHTML':"[data-gp-html]",
+    //     }
+    //     element.removeAttribute(attrMap[attribute]);
+    // },
 
     updateDOM() {
         const appElement = document.getElementById('app');
@@ -142,7 +133,6 @@ const app = {
     }
 };
 
-// Load the app on document ready or as required
 document.addEventListener('DOMContentLoaded', () => {
     app.loadApp();
 });
