@@ -99,7 +99,11 @@ footer .nav-link:focus, footer .nav-link:hover{
     text-underline-offset: 2px;
     text-decoration-color: inherit;
 }
+.skill-items {
+    width: 8rem;
+}
 .skills-icon{
     width: 60px;
-    height: auto
+    height: auto;
+    margin-bottom: .5rem;
 }

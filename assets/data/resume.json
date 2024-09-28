@@ -48,23 +48,23 @@
     "skills": [
       {
           "label": "Angular 17",
-          "thumb": "/assets/images/angular.svg",
+          "thumb": "./assets/images/angular.svg",
           "proficiency": "75%"
       },
       {
           "label": "Vue JS",
-          "thumb": "/assets/images/vuejs-colored.svg",
+          "thumb": "./assets/images/vuejs-colored.svg",
           "proficiency": "60%"
       },
      
       {
         "label": "NodeJs",
-        "thumb": "/assets/images/nodejs-colored.svg",
+        "thumb": "./assets/images/nodejs-colored.svg",
         "proficiency": ""
       },
       {
         "label": "MongoDB",
-        "thumb": "/assets/images/mongodb-colored.svg",
+        "thumb": "./assets/images/mongodb-colored.svg",
         "proficiency": "60%"
       }
      
