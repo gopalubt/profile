@@ -22,13 +22,10 @@ body{
     color: var(--text-primary);
     background-color:var(--bg-background);
 }
-#app{
+body:has(#app.darkMode){
     --text-primay:var(--nuetral);
-    --bg-background: var(--color-lightest);
-    height:100%;
-    width:100%;
-    color: var(--text-primary);
-    background-color:var(--bg-background);
+    --bg-background: var(--color-dark);
+    color: var(--color-lightest);
 }
 
 .bg-th-primary{ background-color: var( --color-primary) !important; }

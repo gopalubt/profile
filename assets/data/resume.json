@@ -66,12 +66,8 @@
         "label": "MongoDB",
         "thumb": "/assets/images/mongodb-colored.svg",
         "proficiency": "60%"
-      },
-      {
-        "label": "MongoDB",
-        "thumb": "/assets/images/mongodb-colored.svg",
-        "proficiency": "60%"
       }
+     
   ],
     "projects": [
       {

@@ -7,15 +7,12 @@
                         <span class="bi bi-list fc-md fc-bold fc-lightest"></span>
                     </button>
                     <div class="list-group list-group-horizontal col-fit ms-auto ">
-                        <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
+                        <button onclick="toggleDarkMode()" class="theme-toggler rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
                             <i class="bi bi-moon"></i>
                         </button>
-                        <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
-                            <i class="bi bi-brightness-high"></i>
-                        </button>
-                        <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
+                        <!-- <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
                             <i class="bi bi-chevron-down"></i>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="w-100 mb-3 d-flex justify-content-center justify-content-md-start align-items-center">
@@ -27,15 +24,12 @@
                         <span class="fc-lightest">Gopal Rana</span>                    
                     </a>
                     <div class="list-group list-group-horizontal icon-group col-fit ms-auto d-none d-md-flex ">
-                        <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
+                        <button onclick="toggleDarkMode()" class="theme-toggler rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
                             <i class="bi bi-moon"></i>
                         </button>
-                        <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
-                            <i class="bi bi-brightness-high"></i>
-                        </button>
-                        <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
+                        <!-- <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
                             <i class="bi bi-chevron-down"></i>
-                        </button>
+                        </button> -->
                     </div>
                 
                 </div>
@@ -66,7 +60,7 @@
                 <!-- nav  -->
                 <ul id="scrollspy-menu" class="nav nav-pills navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                      <a class="nav-link" href="#header">Home</a>
+                      <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#about">About</a>
@@ -82,10 +76,10 @@
     <main data-bs-spy="scroll" data-bs-target="#scrollspy-menu" data-bs-offset="10" class="scrollspy-example" tabindex="0">
         <section id="about" class="block bg-th-light">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center fc-normal">
                     <div class="col-12 col-lg-7 col-md-10 d-flex flex-column gap-2 text-center">
                         <div class="profile-image-wrapper ratio ratio-1x1 rounded-circle p-2">
-                            <img src="../assets/images/image_2.png" alt="ranagopal" class="rounded-circle img-fluid">
+                            <img src="./assets/images/image_2.png" alt="ranagopal" class="rounded-circle img-fluid">
                         </div>
                         <h1 class="fs-lg fw-bold mb-0">Gopal Rana</h1>
                         <p class="fs-sm text-secondary fw-semibold mb-0">Freelance Developer & Designer</p>

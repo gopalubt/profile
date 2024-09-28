@@ -1,7 +1,9 @@
+const appElement = document.getElementById("app");
 const app = {
     htmlText: null,
     virtualDOM: null,
     resume: null,
+    darkMode: false,
     directives: ['data-gp-html', 'data-gp-for', 'data-gp-src', 'data-gp-link', 'data-gp-alt'],
     templates: { html: [],for: [], src: [], link: [],alt: [] },
     async loadApp() {
@@ -125,9 +127,20 @@ const app = {
     //     }
     //     element.removeAttribute(attrMap[attribute]);
     // },
+    toggleDarkMode(){
+        const togglerEl = document.querySelectorAll(".theme-toggler") 
+        this.darkMode = !this.darkMode;
+        if(this.darkMode){
+            appElement.classList.add("darkMode");
+            togglerEl.forEach(ele=>ele.innerHTML = `<i class="bi bi-brightness-high"></i>` )
+        }else{
+            appElement.classList.remove("darkMode");
+            togglerEl.forEach(ele=> ele.innerHTML = `<i class="bi bi-moon"></i>`)
+        }
+    },
 
     updateDOM() {
-        const appElement = document.getElementById('app');
+        // const appElement = document.getElementById('app');
         appElement.innerHTML = this.virtualDOM.innerHTML; 
     }
 };
@@ -135,3 +148,6 @@ const app = {
 document.addEventListener('DOMContentLoaded', () => {
     app.loadApp();
 });
+
+
+const toggleDarkMode = ()=>app.toggleDarkMode()
