@@ -43,14 +43,13 @@ const app = {
 
     async fetchResume() {
         try {
-            const res = await fetch('/assets/data/resume.json');
+            const res = await fetch('https://github.com/gopalubt/profile/blob/master/assets/data/resume.json');
             if (!res.ok) throw new Error("An error occurred while fetching the resume.");
             return res.json();
         } catch (error) {
             console.log(error)
             return null
         }
-        
     },
 
     setDocumentLoops() {
