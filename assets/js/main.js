@@ -62,7 +62,6 @@ const app = {
             } 
         }
         element[attribute] = data !== null && data !== undefined ? data : '';
-       
     },
 
     setDocumentLoops() {
@@ -140,15 +139,14 @@ const app = {
         });
     },     
     toggleDarkMode(){
-        const togglerEl = document.querySelectorAll(".theme-toggler") 
+        const togglerElements = document.querySelectorAll(".theme-toggler") 
         this.darkMode = !this.darkMode;
-        if(this.darkMode){
-            appElement.classList.add("darkMode");
-            togglerEl.forEach(ele=>ele.innerHTML = `<i class="bi bi-brightness-high"></i>` )
-        }else{
-            appElement.classList.remove("darkMode");
-            togglerEl.forEach(ele=> ele.innerHTML = `<i class="bi bi-moon"></i>`)
-        }
+        appElement.classList.toggle("darkMode", this.darkMode);
+        togglerElements.forEach(ele => {
+            ele.innerHTML = this.darkMode 
+                ? `<i class="bi bi-brightness-high"></i>` 
+                : `<i class="bi bi-moon"></i>`;
+        });
     },
     updateDOM() {
         appElement.innerHTML = this.virtualDOM.innerHTML; 

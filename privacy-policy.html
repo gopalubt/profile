@@ -1,1 +1,34 @@
-prevacy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pivacy</title>
+</head>
+<body>
+    <div id="app">
+        <ul class="nav nav pill">
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+    <script src="/gpapp/new-gp-app.js"></script>
+    <script>
+        const app = new GpApp('app');
+        const headerComponent = async () => {
+            return `<header><h1>My App</h1></header>`;
+        };
+
+        const footerComponent = async () => {
+            return `<footer><p>Footer content</p></footer>`;
+        };
+        app.registerComponent('footer', footerComponent);
+        app.registerComponent('header', headerComponent);
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await app.loadView('footer');
+            await app.loadView('header');
+        });
+
+    </script>
+</body>
+</html>

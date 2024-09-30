@@ -1,41 +1,32 @@
 class GpApp {
-    constructor(appElementId) {
+    _appElement = null;
+    static components = {};
+    static data = {};
+
+    async created() {}
+
+    constructor(appElementId, data = {}, method = {}) {
+        this._appElement = document.getElementById(appElementId);
         this.appElement = document.getElementById(appElementId);
+        this.data = { ...data };
+        this.components = {};
         this.htmlText = null;
         this.virtualDOM = null;
         this.resume = null;
         this.darkMode = false;
-        this.directives = ['data-gp-html', 'data-gp-for', 'data-gp-src', 'data-gp-link', 'data-gp-alt'];
+        this.directives = ['data-gp-html', 'data-gp-for', 'data-gp-src', 'data-gp-href', 'data-gp-alt'];
         this.templates = { html: [], for: [], src: [], link: [], alt: [] };
     }
 
     async loadApp() {
         try {
-            await this.loadHTML('./public/home.html'); 
-            // await this.loadComponents(); 
-           await this.created();
-            console.log(this.resume);
-            
+            this.virtualDOM = this.appElement;
+            await this.loadComponents(this.components);
+            await this.created();
             this.renderDOM();
             this.updateDOM();
         } catch (error) {
             console.error("Error:", error.message);
-        }
-    }
-    async created(){
-        // this.resume = await this.fetchResume(); 
-    }
-
-    async loadHTML(url) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error('Network response was not ok');
-
-            this.htmlText = await response.text();
-            this.virtualDOM = this.createVirtualDOM(this.htmlText);
-            this.updateTemplates();
-        } catch (error) {
-            console.error('Error fetching HTML:', error);
         }
     }
 
@@ -45,28 +36,10 @@ class GpApp {
         return tempDiv;
     }
 
-    updateTemplates() {
-        this.templates.html = this.virtualDOM.querySelectorAll("[data-gp-html]");
-        this.templates.for = this.virtualDOM.querySelectorAll("[data-gp-for]");
-        this.templates.src = this.virtualDOM.querySelectorAll("[data-gp-src]");
-        this.templates.link = this.virtualDOM.querySelectorAll("[data-gp-link]");
-        this.templates.alt = this.virtualDOM.querySelectorAll("[data-gp-alt]");
-    }
-
-    // async fetchResume() {
-    //     try {
-    //         const response = await fetch('./assets/data/resume.json');
-    //         if (!response.ok) throw new Error("An error occurred while fetching the resume.");
-    //         return await response.json();
-    //     } catch (error) {
-    //         console.error(error);
-    //         return null;
-    //     }
-    // }
-    async fetchData(url, options={}) {
+    async fetchData(url, options = {}) {
         try {
             const response = await fetch(url, options);
-            if (!response.ok) throw new Error("An error occurred while fetching the resume.");
+            if (!response.ok) throw new Error("An error occurred while fetching data.");
             return await response.json();
         } catch (error) {
             console.error(error);
@@ -75,12 +48,15 @@ class GpApp {
     }
 
     renderDOM() {
-        this.setDocumentInnerHTML(this.virtualDOM, null);
         this.setDocumentLoops();
+        this.setDocumentInnerHTML(this.virtualDOM, null);
+        this.setDOMImgScr(this.virtualDOM, null);
+        this.setAnchorHref(this.virtualDOM, null);
+        this.updateDOM();  
     }
 
     setDocumentLoops() {
-        const loops = this.templates.for;
+        const loops = this.virtualDOM.querySelectorAll("[data-gp-for]");
         loops.forEach(element => {
             const dataKey = element.dataset.gpFor;
             this.populateTemplateLoop(element, dataKey);
@@ -149,32 +125,19 @@ class GpApp {
     }
 
     toggleDarkMode() {
-        const togglerElements = document.querySelectorAll(".theme-toggler"); 
         this.darkMode = !this.darkMode;
-        
         this.appElement.classList.toggle("darkMode", this.darkMode);
-        
-        togglerElements.forEach(ele => {
-            ele.innerHTML = this.darkMode 
-                ? `<i class="bi bi-brightness-high"></i>` 
-                : `<i class="bi bi-moon"></i>`;
-        });
     }
+
     removeDataAttributes(element) {
-        // Use a loop to gather all elements within the provided element
-        const elements = element.querySelectorAll('*'); // Select all descendant elements
-    
-        // Iterate over each element
+        const elements = element.querySelectorAll('*');
         elements.forEach(el => {
-            // Collect the attributes to remove
             const attributesToRemove = [];
             for (let attr of el.attributes) {
                 if (attr.name.startsWith('data-gp-')) {
-                    attributesToRemove.push(attr.name); // Store attribute names for removal
+                    attributesToRemove.push(attr.name);
                 }
             }
-    
-            // Remove the gathered attributes
             attributesToRemove.forEach(attrName => {
                 el.removeAttribute(attrName);
             });
@@ -185,40 +148,36 @@ class GpApp {
         this.appElement.innerHTML = this.virtualDOM.innerHTML; 
     }
 
-    // async loadHTML (url) {
-    //     try {
-    //         const response = await fetch(url);
-    //         if (!response.ok) {
-    //             throw new Error(`Failed to fetch: ${response.statusText}`);
-    //         }
-    //         return await response.text();
-    //     } catch (error) {
-    //         console.error('Error fetching HTML:', error);
-    //         return '';
-    //     }
-    // }
-    // async loadComponent (component) {
-    //     const elements = document.querySelectorAll(`[data-gp-component="${component.name}"]`);
-    //     const componentHtml = await loadHTML(component.path);
-    
-    //     if (componentHtml) {
-    //         const template = document.createElement('template');
-    //         template.innerHTML = componentHtml.trim();
-    
-    //         elements.forEach(el => {
-    //             const fragment = template.content.cloneNode(true);
-    //             el.parentElement.replaceChild(fragment, el);
-    //         });
-    //     }
-    // };
-    
-    // // Load all components in sequence
-    // async loadComponents (components) {
-    //     for (const component of components) {
-    //         await loadComponent(component);
-    //     }
-    // };
-};
+    async loadHTML(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
+            return await response.text();
+        } catch (error) {
+            console.error('Error fetching HTML:', error);
+            return '';
+        }
+    }
 
-// Load a specific component into the DOM
- 
+    async loadComponent(component) {
+        const elements = this.virtualDOM.querySelectorAll(`[data-gp-component="${component[0]}"]`);
+        const componentHtml = await this.loadHTML(component[1]);
+        
+        if (componentHtml) {
+            const template = this.createVirtualDOM(componentHtml);
+            elements.forEach(el => {
+                el.outerHTML = template.innerHTML; // Replace the element directly with the inner HTML
+            });
+        } else {
+            console.error(`Failed to load component: ${component[0]}`);
+        }
+    }
+    
+    async loadComponents(components) {
+        const componentMap = Object.entries(components);
+        if (componentMap.length <= 0) return;
+        for (const component of componentMap) {
+            await this.loadComponent(component);
+        }
+    }
+}
