@@ -1,12 +1,10 @@
 class GpApp {
-    _appElement = null;
     static components = {};
     static data = {};
 
     async created() {}
 
     constructor(appElementId, data = {}, method = {}) {
-        this._appElement = document.getElementById(appElementId);
         this.appElement = document.getElementById(appElementId);
         this.data = { ...data };
         this.components = {};

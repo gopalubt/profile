@@ -31,7 +31,6 @@ const app = {
             this.htmlText = await response.text();
             this.virtualDOM = document.createElement('div');
             this.virtualDOM.innerHTML = this.htmlText;
-            // this.updateTemplates();
         } catch (error) {
             console.error('Error fetching HTML:', error);
         }
@@ -119,20 +118,14 @@ const app = {
         });
     },
     removeDataAttributes(element) {
-        // Use a loop to gather all elements within the provided element
-        const elements = element.querySelectorAll('*'); // Select all descendant elements
-    
-        // Iterate over each element
+        const elements = element.querySelectorAll('*'); 
         elements.forEach(el => {
-            // Collect the attributes to remove
             const attributesToRemove = [];
             for (let attr of el.attributes) {
                 if (attr.name.startsWith('data-gp-')) {
-                    attributesToRemove.push(attr.name); // Store attribute names for removal
+                    attributesToRemove.push(attr.name);
                 }
             }
-    
-            // Remove the gathered attributes
             attributesToRemove.forEach(attrName => {
                 el.removeAttribute(attrName);
             });

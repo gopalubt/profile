@@ -2,11 +2,11 @@
     <nav id="web-navbar" class="navbar navbar-expand-md navbar-light bg-th-darkest">
         <div class="container-fluid d-flex flex-column">
             <div class="w-100 d-flex justify-content-start align-items-center d-block d-md-none mb-3">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="bi bi-list fc-md fc-bold fc-lightest"></span>
                 </button>
                 <div class="list-group list-group-horizontal col-fit ms-auto ">
-                    <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
+                    <button onclick="toggleDarkMode()" class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
                         <i class="bi bi-moon"></i>
                     </button>
                     <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
@@ -26,7 +26,7 @@
                     <span class="fc-lightest">Gopal Rana</span>                    
                 </a>
                 <div class="list-group list-group-horizontal icon-group col-fit ms-auto d-none d-md-flex ">
-                    <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
+                    <button onclick="toggleDarkMode()" class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">
                         <i class="bi bi-moon"></i>
                     </button>
                     <button class="rounded-circle list-group-item bg-transparent fc-md fc-bold fc-lightest">

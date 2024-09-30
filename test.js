@@ -14,3 +14,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     await myApp.loadApp();
 });
+
+const toggleDarkMode = ()=>myApp.toggleDarkMode()
