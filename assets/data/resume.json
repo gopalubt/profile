@@ -50,23 +50,27 @@
       {
           "label": "Angular 17",
           "thumb": "./assets/images/angular.svg",
-          "proficiency": "75%"
-      },
-      {
+          "proficiency": "75%",
+          "url":"https://v17.angular.io/start"
+        },
+        {
           "label": "Vue JS",
           "thumb": "./assets/images/vuejs-colored.svg",
+          "url":"https://v17.angular.io/start",
           "proficiency": "60%"
-      },
-     
-      {
-        "label": "NodeJs",
-        "thumb": "./assets/images/nodejs-colored.svg",
-        "proficiency": ""
-      },
-      {
-        "label": "MongoDB",
-        "thumb": "./assets/images/mongodb-colored.svg",
-        "proficiency": "60%"
+        },
+        
+        {
+          "label": "NodeJs",
+          "thumb": "./assets/images/nodejs-colored.svg",
+          "url":"https://v17.angular.io/start",
+          "proficiency": ""
+        },
+        {
+          "label": "MongoDB",
+          "thumb": "./assets/images/mongodb-colored.svg",
+          "url":"https://v17.angular.io/start",
+          "proficiency": "60%"
       }
      
   ],

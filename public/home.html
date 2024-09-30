@@ -99,8 +99,10 @@
                       </h3>
                       <ul class="list-unstyled d-flex flex-wrap gap-3 justify-content-center mt-4">
                         <li class="skill-items text-center bg-light p-3 rounded shadow-sm d-flex flex-column align-items-center" data-gp-for="skill of resume.skills">
-                          <img data-gp-src="skill.thumb" data-gp-alt="skill.label" class="img-fluid skills-icon" >
-                          <p class="text-secondary" data-gp-html="skill.label"></p>
+                            <a data-gp-href="skill.url" target="_blank">
+                                <img data-gp-src="skill.thumb" data-gp-alt="skill.label" class="img-fluid skills-icon" >
+                                <p class="text-secondary" data-gp-html="skill.label"></p>
+                            </a>
                         </li>
                       </ul>
                 </div>

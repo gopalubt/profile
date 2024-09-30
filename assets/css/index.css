@@ -50,6 +50,8 @@ body:has(#app.darkMode){
 
 .w-fit-content, .col-fit{width:fit-content !important}
 .fw-semibold{font-weight:600 !important}
+a:not(:hover){ text-decoration:none !important; color: var(--text-primary)}
+
 .block{
     padding: 3rem 0;
 }

@@ -4,18 +4,18 @@ const app = {
     virtualDOM: null,
     resume: null,
     darkMode: false,
-    directives: ['data-gp-html', 'data-gp-for', 'data-gp-src', 'data-gp-link', 'data-gp-alt'],
-    templates: { html: [],for: [], src: [], link: [],alt: [] },
+    directives: ['data-gp-html', 'data-gp-for', 'data-gp-src', 'data-gp-href', 'data-gp-alt'],
+    templates: { html: [], for: [], src: [], href: [], alt: [] },
     async loadApp() {
         try {
             await this.loadHTML('./public/home.html'); 
             this.resume = await this.fetchResume(); 
             console.log(this.resume);
             
+            this.setDocumentLoops();
             this.setDocumentInnerHTML(this.virtualDOM, null);
             this.setDOMImgScr(this.virtualDOM, null);
             this.setAnchorHref(this.virtualDOM, null);
-            this.setDocumentLoops();
             this.updateDOM();  
             
         } catch (error) {
@@ -87,6 +87,7 @@ const app = {
             const clonedTemplate = ele.cloneNode(true);
             this.setDocumentInnerHTML(clonedTemplate, { [item]: dataItem });
             this.setDOMImgScr(clonedTemplate, { [item]: dataItem });
+            this.setAnchorHref(clonedTemplate, { [item]: dataItem });
             this.removeDataAttributes(clonedTemplate);
             fragment.appendChild(clonedTemplate);
         });
@@ -101,13 +102,12 @@ const app = {
         });
     },
     setAnchorHref(template, data) {
-        const htmlElements = template.querySelectorAll("[data-gp-link]");
+        const htmlElements = template.querySelectorAll("[data-gp-href]");
         htmlElements.forEach(ele => {
-            const dataKey = ele.dataset.gpHtml;
+            const dataKey = ele.dataset.gpHref;
             this.setDOMElement('href', ele, dataKey, data);
         });
     },
-
     setDOMImgScr(template, data) {
         const htmlElements = template.querySelectorAll("[data-gp-src]");
         htmlElements.forEach(ele => {
@@ -119,7 +119,6 @@ const app = {
             }          
         });
     },
-   
     removeDataAttributes(element) {
         // Use a loop to gather all elements within the provided element
         const elements = element.querySelectorAll('*'); // Select all descendant elements
@@ -140,7 +139,6 @@ const app = {
             });
         });
     },     
-    
     toggleDarkMode(){
         const togglerEl = document.querySelectorAll(".theme-toggler") 
         this.darkMode = !this.darkMode;
@@ -152,9 +150,7 @@ const app = {
             togglerEl.forEach(ele=> ele.innerHTML = `<i class="bi bi-moon"></i>`)
         }
     },
-
     updateDOM() {
-        // const appElement = document.getElementById('app');
         appElement.innerHTML = this.virtualDOM.innerHTML; 
     }
 };
