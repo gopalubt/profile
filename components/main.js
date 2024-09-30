@@ -8,13 +8,11 @@ const app = {
     templates: { html: [],for: [], src: [], link: [],alt: [] },
     async loadApp() {
         try {
-            await this.loadHTML('./public/home.html'); 
+            await this.loadHTML('./component/home.html'); 
             this.resume = await this.fetchResume(); 
             console.log(this.resume);
             
             this.setDocumentInnerHTML(this.virtualDOM, null);
-            this.setDOMImgScr(this.virtualDOM, null);
-            this.setAnchorHref(this.virtualDOM, null);
             this.setDocumentLoops();
             this.updateDOM();  
             
@@ -26,20 +24,28 @@ const app = {
     async loadHTML(url) {
         try {
             const response = await fetch(url);
-            if (!response.ok) throw new Error('Network response was not ok');
+            // if (!response.ok) throw new Error('Network response was not ok');
 
             this.htmlText = await response.text();
             this.virtualDOM = document.createElement('div');
             this.virtualDOM.innerHTML = this.htmlText;
-            // this.updateTemplates();
+            this.updateTemplates();
         } catch (error) {
             console.error('Error fetching HTML:', error);
         }
     },
+    
+    updateTemplates() {
+        this.templates.html = this.virtualDOM.querySelectorAll("[data-gp-html]");
+        this.templates.for = this.virtualDOM.querySelectorAll("[data-gp-for]");
+        this.templates.src = this.virtualDOM.querySelectorAll("[data-gp-src]");
+        this.templates.link = this.virtualDOM.querySelectorAll("[data-gp-link]");
+        this.templates.alt = this.virtualDOM.querySelectorAll("[data-gp-alt]");
+    },
 
     async fetchResume() {
         try {
-            const res = await fetch('./assets/data/resume.json');
+            const res = await fetch('../assets/data/resume.json');
             if (!res.ok) throw new Error("An error occurred while fetching the resume.");
             return res.json();
         } catch (error) {
@@ -47,29 +53,11 @@ const app = {
             return null
         }
     },
-     setDOMElement(attribute, element, dataKey, data=null) {
-        if (!element || !dataKey) return;
-        const keys = dataKey.split('.');
-        if(!data){
-            data = {[keys[0]] : this[keys[0]]};
-        }
-        for (const key of keys) {
-            if (data && key in data) {       
-                data = data[key];
-            } else { 
-                data = null; 
-                break;
-            } 
-        }
-        element[attribute] = data !== null && data !== undefined ? data : '';
-       
-    },
 
     setDocumentLoops() {
-        const loops = this.virtualDOM.querySelectorAll("[data-gp-for]");
+        const loops = this.templates.for;
         loops.forEach(ele => {
             const dataKey = ele.dataset.gpFor;
-            ele.removeAttribute("data-gp-for");
             this.setTemplateLoopData(ele, dataKey);
         });
     },
@@ -86,8 +74,7 @@ const app = {
         collection.forEach((dataItem) => {
             const clonedTemplate = ele.cloneNode(true);
             this.setDocumentInnerHTML(clonedTemplate, { [item]: dataItem });
-            this.setDOMImgScr(clonedTemplate, { [item]: dataItem });
-            this.removeDataAttributes(clonedTemplate);
+            this.setDOMImgScr(clonedTemplate, { [item]: dataItem })
             fragment.appendChild(clonedTemplate);
         });
         parentEl.replaceChild(fragment, ele); 
@@ -98,13 +85,6 @@ const app = {
         htmlElements.forEach(ele => {
             const dataKey = ele.dataset.gpHtml;
             this.setDOMElement('innerHTML', ele, dataKey, data);
-        });
-    },
-    setAnchorHref(template, data) {
-        const htmlElements = template.querySelectorAll("[data-gp-link]");
-        htmlElements.forEach(ele => {
-            const dataKey = ele.dataset.gpHtml;
-            this.setDOMElement('href', ele, dataKey, data);
         });
     },
 
@@ -119,28 +99,34 @@ const app = {
             }          
         });
     },
-   
-    removeDataAttributes(element) {
-        // Use a loop to gather all elements within the provided element
-        const elements = element.querySelectorAll('*'); // Select all descendant elements
-    
-        // Iterate over each element
-        elements.forEach(el => {
-            // Collect the attributes to remove
-            const attributesToRemove = [];
-            for (let attr of el.attributes) {
-                if (attr.name.startsWith('data-gp-')) {
-                    attributesToRemove.push(attr.name); // Store attribute names for removal
-                }
-            }
-    
-            // Remove the gathered attributes
-            attributesToRemove.forEach(attrName => {
-                el.removeAttribute(attrName);
-            });
-        });
-    },     
-    
+
+    setDOMElement(attribute, element, dataKey, data=null) {
+        if (!element || !dataKey) return;
+        const keys = dataKey.split('.');
+        if(!data){
+            data = {[keys[0]] : this[keys[0]]};
+        }
+        for (const key of keys) {
+            if (data && key in data) {       
+                data = data[key];
+            } else { 
+                data = null; 
+                break;
+            } 
+        }
+        // this.removeDataAttribute(attribute, element);
+        element[attribute] = data !== null && data !== undefined ? data : '';
+    },
+
+    // removeDataAttribute(attribute, element){
+    //     let attrMap= {
+    //         'src':"[data-gp-src]",
+    //         'alt':"[data-gp-alt]",
+    //         'link':"[data-gp-link]",
+    //         'innerHTML':"[data-gp-html]",
+    //     }
+    //     element.removeAttribute(attrMap[attribute]);
+    // },
     toggleDarkMode(){
         const togglerEl = document.querySelectorAll(".theme-toggler") 
         this.darkMode = !this.darkMode;
@@ -162,5 +148,6 @@ const app = {
 document.addEventListener('DOMContentLoaded', () => {
     app.loadApp();
 });
+
 
 const toggleDarkMode = ()=>app.toggleDarkMode()
