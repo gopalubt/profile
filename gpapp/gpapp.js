@@ -162,7 +162,7 @@ class GpApp {
     async loadHTML(url, options={}) {
         try {
             let gitRepo = 'profile'
-            const url = location.origin=='https://gopalubt.github.io' ? `${location.origin}/${gitRepo}/${url}` :url
+            url = location.origin=='https://gopalubt.github.io' ? `${location.origin}/${gitRepo}/${url}` :url
             const response = await fetch(url, options);
             if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
             return await response.text();
