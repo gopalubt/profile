@@ -158,12 +158,13 @@ class GpApp {
     updateDOM() {
         this.appElement.innerHTML = this.virtualDOM.innerHTML; 
     }
-
+    resolvedUrlPath(absolutePath) {
+        return  location.origin.includes('github.io') ? `${location.origin}/${location.pathname.split('/')[1]}${absolutePath}` : `${location.origin}${absolutePath}`;
+    }
     async loadHTML(url, options={}) {
         try {
-            let gitRepo = 'profile'
-            url = location.origin=='https://gopalubt.github.io' ? `${location.origin}/${gitRepo}/${url}` :url
-            const response = await fetch(url, options);
+            const resovedUrl = this.resolvedUrlPath(url)
+            const response = await fetch(resovedUrl, options);
             if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
             return await response.text();
         } catch (error) {
