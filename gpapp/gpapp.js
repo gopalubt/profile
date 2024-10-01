@@ -159,9 +159,11 @@ class GpApp {
         this.appElement.innerHTML = this.virtualDOM.innerHTML; 
     }
 
-    async loadHTML(url) {
+    async loadHTML(url, options={}) {
         try {
-            const response = await fetch(url);
+            let gitRepo = 'profile'
+            const url = location.origin=='https://gopalubt.github.io' ? `${location.origin}/${gitRepo}/${url}` :url
+            const response = await fetch(url, options);
             if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
             return await response.text();
         } catch (error) {
