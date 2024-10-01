@@ -12,9 +12,9 @@ const myApp = new GpApp("app", {}, {
 });
 document.addEventListener('DOMContentLoaded', async () => {
     myApp.components = {
-        "footer": { path: "/components/footer.html" },
-        "main": { path: "/components/main.html" },
-        "header": { path: "/components/header.html" }
+        "footer": "/components/footer.html",
+        "main": "/components/main.html",
+        "header": "/components/header.html"
     };
     myApp.created = async function() {
         try {
