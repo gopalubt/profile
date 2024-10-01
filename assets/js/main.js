@@ -26,6 +26,7 @@ const app = {
     async loadHTML(url) {
         try {
             const response = await fetch(url);
+            debugger
             if (!response.ok) throw new Error('Network response was not ok');
 
             this.htmlText = await response.text();

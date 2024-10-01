@@ -173,7 +173,6 @@ class GpApp {
     async loadComponent(component) {
         const elements = this.virtualDOM.querySelectorAll(`[data-gp-component="${component[0]}"]`);
         const componentHtml = await this.loadHTML(component[1]);
-        
         if (componentHtml) {
             const template = this.createVirtualDOM(componentHtml);
             elements.forEach(el => {
