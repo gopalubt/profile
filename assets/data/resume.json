@@ -8,7 +8,7 @@
       "linkedin": "https://www.linkedin.com/in/gopal-rana-820a4862/",
       "github": "https://github.com/gopalubt"
     },
-    "profile":"WEb developer",
+    "profile":"Web developer ",
     "summary": "Experienced front-end developer with over 3 years of expertise in building dynamic, responsive web applications using Angular, JavaScript, HTML, and CSS. Proficient in modern web technologies and focused on delivering clean, efficient, and user-friendly solutions.",
     "experience": [
       {
@@ -49,26 +49,26 @@
     "skills": [
       {
           "label": "Angular 17",
-          "thumb": "./assets/images/angular.svg",
+          "thumb": "https://gopalubt.github.io/profile/assets/images/angular.svg",
           "proficiency": "75%",
           "url":"https://v17.angular.io/start"
         },
         {
           "label": "Vue JS",
-          "thumb": "./assets/images/vuejs-colored.svg",
+          "thumb": "https://gopalubt.github.io/profile/assets/images/vuejs-colored.svg",
           "url":"https://v17.angular.io/start",
           "proficiency": "60%"
         },
         
         {
           "label": "NodeJs",
-          "thumb": "./assets/images/nodejs-colored.svg",
+          "thumb": "https://gopalubt.github.io/profile/assets/images/nodejs-colored.svg",
           "url":"https://v17.angular.io/start",
           "proficiency": ""
         },
         {
           "label": "MongoDB",
-          "thumb": "./assets/images/mongodb-colored.svg",
+          "thumb": "https://gopalubt.github.io/profile/assets/images/mongodb-colored.svg",
           "url":"https://v17.angular.io/start",
           "proficiency": "60%"
       }

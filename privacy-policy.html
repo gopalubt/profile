@@ -6,29 +6,11 @@
     <title>Pivacy</title>
 </head>
 <body>
-    <div id="app">
-        <ul class="nav nav pill">
-            <li class="nav-item"></li>
-        </ul>
-    </div>
-    <script src="/gpapp/new-gp-app.js"></script>
-    <script>
-        const app = new GpApp('app');
-        const headerComponent = async () => {
-            return `<header><h1>My App</h1></header>`;
-        };
-
-        const footerComponent = async () => {
-            return `<footer><p>Footer content</p></footer>`;
-        };
-        app.registerComponent('footer', footerComponent);
-        app.registerComponent('header', headerComponent);
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            await app.loadView('footer');
-            await app.loadView('header');
-        });
-
-    </script>
+    <header data-gp-component="header"></header>
+    <main data-gp-component="main"></main>
+    <footer data-gp-component="footer"></footer>
+    
+    <script src="https://gopalubt.github.io/profile/gpapp/gpapp.js"></script>
+    <script src="privacy.json"></script>
 </body>
 </html>

@@ -4,9 +4,10 @@ class GpApp {
 
     async created() {}
 
-    constructor(appElementId, data = {}, method = {}) {
+    constructor(appElementId, data = {}, methods = {}) {
         this.appElement = document.getElementById(appElementId);
         this.data = { ...data };
+        this.methods = { ...methods };
         this.components = {};
         this.htmlText = null;
         this.virtualDOM = null;
@@ -22,12 +23,11 @@ class GpApp {
             await this.loadComponents(this.components);
             await this.created();
             this.renderDOM();
-            this.updateDOM();
+            // this.updateDOM();
         } catch (error) {
             console.error("Error:", error.message);
         }
     }
-
     createVirtualDOM(html) {
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = html;
@@ -44,15 +44,30 @@ class GpApp {
             return null;
         }
     }
-
     renderDOM() {
         this.setDocumentLoops();
-        this.setDocumentInnerHTML(this.virtualDOM, null);
-        this.setDOMImgScr(this.virtualDOM, null);
-        this.setAnchorHref(this.virtualDOM, null);
-        this.updateDOM();  
+        this.setDOMAttributes(this.virtualDOM, null);
+        this.attachEventDelegation();
+        this.updateDOM();
     }
 
+    attachEventDelegation() {
+        this.appElement.addEventListener('click', event => this.delegateDynamicEvent(event, 'click'));
+        this.appElement.addEventListener('input', event => this.delegateDynamicEvent(event, 'input'));
+        // Add other events like 'change', 'focus', etc.
+    }
+
+    delegateDynamicEvent(event, eventType) {
+        const target = event.target.closest(`[data-e]`);
+        if (target) {
+            const [eventKey, methodName] = target.dataset.e.split(':');
+            if (eventKey === eventType && this.methods[methodName]) {
+                this.methods[methodName].call(this, event);
+            } else if (!this.methods[methodName]) {
+                console.error(`Method ${methodName} is not defined.`);
+            }
+        }
+    }
     setDocumentLoops() {
         const loops = this.virtualDOM.querySelectorAll("[data-gp-for]");
         loops.forEach(element => {
@@ -72,8 +87,8 @@ class GpApp {
 
         collection.forEach(dataItem => {
             const clonedTemplate = element.cloneNode(true);
-            this.setDocumentInnerHTML(clonedTemplate, { [item]: dataItem });
-            this.setImageSrc(clonedTemplate, { [item]: dataItem });
+            this.setDOMAttributes(clonedTemplate, { [item]: dataItem });
+    
             this.removeDataAttributes(clonedTemplate);
             fragment.appendChild(clonedTemplate);
         });
@@ -84,28 +99,31 @@ class GpApp {
     resolveDataPath(path) {
         return path.split('.').reduce((acc, curr) => acc && acc[curr], this);
     }
-
-    setDocumentInnerHTML(template, data) {
-        const elements = template.querySelectorAll("[data-gp-html]");
-        elements.forEach(ele => {
-            const dataKey = ele.dataset.gpHtml;
-            this.setDOMAttribute('innerHTML', ele, dataKey, data);
+    setDOMAttributes(template, data) {
+        const attributeMap = {
+            'data-gp-html': 'innerHTML',
+            'data-gp-src': 'src',
+            'data-gp-alt': 'alt',
+            'data-gp-href': 'href'
+        };
+    
+        Object.keys(attributeMap).forEach(attr => {
+            const elements = template.querySelectorAll(`[${attr}]`);
+            let dataKeyName = "gp" + attr.slice(8, 9).toUpperCase() + attr.slice(9);
+            
+            elements.forEach(ele => {
+                // const dataKey = ele.dataset[attr.split('-')[2]];
+                const dataKey = ele.dataset[dataKeyName];
+                this.setAttributeVaules(attributeMap[attr], ele, dataKey, data);               
+                if (attr === 'data-gp-src' && ele.dataset.gpAlt) {
+                    const altKey = ele.dataset.gpAlt;
+                    this.setAttributeVaules('alt', ele, altKey, data);
+                }
+            });
         });
     }
 
-    setImageSrc(template, data) {
-        const elements = template.querySelectorAll("[data-gp-src]");
-        elements.forEach(ele => {
-            const dataKey = ele.dataset.gpSrc;
-            const altKey = ele.dataset.gpAlt;
-            this.setDOMAttribute('src', ele, dataKey, data);
-            if (altKey) {
-                this.setDOMAttribute('alt', ele, altKey, data);
-            }          
-        });
-    }
-
-    setDOMAttribute(attribute, element, dataKey, data = null) {
+    setAttributeVaules(attribute, element, dataKey, data = null) {
         if (!element || !dataKey) return;
         const keys = dataKey.split('.');
         data = data || { [keys[0]]: this[keys[0]] };
@@ -120,11 +138,6 @@ class GpApp {
         }
 
         element[attribute] = data !== null && data !== undefined ? data : '';
-    }
-
-    toggleDarkMode() {
-        this.darkMode = !this.darkMode;
-        this.appElement.classList.toggle("darkMode", this.darkMode);
     }
 
     removeDataAttributes(element) {
@@ -159,7 +172,7 @@ class GpApp {
 
     async loadComponent(component) {
         const elements = this.virtualDOM.querySelectorAll(`[data-gp-component="${component[0]}"]`);
-        const componentHtml = await this.loadHTML(component[1]);
+        const componentHtml = await this.loadHTML(component[1].path);
         
         if (componentHtml) {
             const template = this.createVirtualDOM(componentHtml);
@@ -178,4 +191,5 @@ class GpApp {
             await this.loadComponent(component);
         }
     }
+    
 }
