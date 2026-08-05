@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Itinerary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="banner"></div>
+  <div id="summary"></div>
+  <div id="map"></div>
+
+  <script src="loadComponent.js"></script>
+  <script>
+    /**
+     * Sample data. In the real service this is injected by the caller rather
+     * than hardcoded here.
+     */
+    const TRIP = {
+      title: 'Amazing Europe Tour',
+      days: '7',
+      pax: '4 Adults',
+      price: '₹85,000',
+    };
+
+    /** Set text if the node exists; a missing node is a template bug, not a crash. */
+    function setText(root, selector, value) {
+      const node = root.querySelector(selector);
+      if (!node) {
+        console.warn(`Missing node for "${selector}" - skipping.`);
+        return;
+      }
+      // textContent, not innerText/innerHTML: no markup can be injected.
+      node.textContent = value;
+    }
+
+    async function init() {
+      // Partials are independent, so load them in parallel rather than in series.
+      await Promise.all([
+        loadComponent('#header', 'header.html'),
+        loadComponent('#banner', 'banner.html'),
+        loadComponent('#summary', 'summary.html'),
+        loadComponent('#map', 'map.html'),
+      ]);
+
+      setText(document, '#banner h1', TRIP.title);
+      setText(document, '#summary #days', TRIP.days);
+      setText(document, '#summary #pax', TRIP.pax);
+      setText(document, '#summary #price', TRIP.price);
+
+      // server.js waits on this instead of sleeping for a fixed interval.
+      window.__renderComplete = true;
+    }
+
+    init().catch((error) => {
+      console.error('Failed to build the itinerary page:', error);
+      // Surface the failure to the renderer so it does not silently time out.
+      window.__renderError = error.message;
+      window.__renderComplete = true;
+    });
+  </script>
+</body>
+</html>

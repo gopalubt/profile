@@ -1,0 +1,15 @@
+{
+  "name": "@gsr/itinerary-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generates itinerary PDFs from template data with Puppeteer.",
+  "main": "src/routes.js",
+  "scripts": {
+    "smoke": "node scripts/smoke.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "puppeteer": "^24.20.0"
+  },
+  "license": "ISC"
+}

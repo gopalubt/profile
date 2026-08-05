@@ -1,0 +1,37 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# build output
+dist/
+build/
+.cache/
+
+# environment / secrets
+.env
+.env.*
+!.env.example
+
+# runtime artifacts
+uploaded_files/
+*.pdf
+output.pdf
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# git leftovers
+.git/index.lock
+
+# Legacy reference copies. legacy-bb-index.js.bak contains a live Google Maps
+# API key; keeping it untracked stops that secret entering git history.
+*.bak

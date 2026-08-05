@@ -1,0 +1,14 @@
+{
+  "name": "@gsr/portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio site rendered with @gsr/gpapp.",
+  "scripts": {
+    "sync-vendor": "node scripts/sync-vendor.mjs",
+    "predev": "npm run sync-vendor",
+    "dev": "npx --yes serve . -l 3000",
+    "prestart": "npm run sync-vendor",
+    "start": "npx --yes serve . -l 3000"
+  },
+  "license": "ISC"
+}

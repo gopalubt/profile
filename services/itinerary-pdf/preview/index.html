@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+
+          @page { margin-left: 0px; margin-right: 0px;  color: #202833;}
+ 
+          @media print { 
+            body { 
+            padding: 0; 
+            margin: 0;
+            font-size: 13px;
+            font-family: Open Sans, sans-serif;
+            color: #202833;
+        }
+    }
+        </style>
+  </head>
+  <title>${templateData?.title}</title>
+
+  <body class="mat-typography" data-new-gr-c-s-check-loaded="14.1252.0" data-gr-ext-installed="">
+  <app-root _nghost-xwr-c13="" ng-version="15.2.10"><router-outlet _ngcontent-xwr-c13=""></router-outlet><app-preview _nghost-xwr-c114=""><link _ngcontent-xwr-c114="" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+    <header _ngcontent-xwr-c114="" id="header" class="d-flex align-items-center sticky" ng-reflect-ng-class="[object Object]">
+        <div _ngcontent-xwr-c114="" class="container-fluid d-flex align-items-center justify-content-between">
+        <h1 _ngcontent-xwr-c114="" class="logo"><a _ngcontent-xwr-c114="">
+            <img _ngcontent-xwr-c114="" src="../../../assets/img/blueberrytravel.png" alt="Blueberry Travel"></a>
+        </h1>
+            <nav _ngcontent-xwr-c114="" id="navbar" class="navbar">
+                <ul _ngcontent-xwr-c114="">
+                    <li _ngcontent-xwr-c114="">
+                        <a _ngcontent-xwr-c114="" class="nav-link scrollto pointer"> Overview </a>
+                    </li>
+                    <li _ngcontent-xwr-c114="" class="dropdown">
+                        <a _ngcontent-xwr-c114="" class="nav-link scrollto pointer dropdown-toggle"> Days </a>
+                        <!--bindings={}--></li><li _ngcontent-xwr-c114=""><a _ngcontent-xwr-c114="" class="nav-link scrollto pointer"> Price </a></li><li _ngcontent-xwr-c114=""><a _ngcontent-xwr-c114="" class="nav-link scrollto pointer"> Travel Agent </a></li><li _ngcontent-xwr-c114=""><a _ngcontent-xwr-c114="" class="nav-link scrollto pointer"> FAQ </a></li></ul><i _ngcontent-xwr-c114="" class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+    
+    <section _ngcontent-xwr-c114="" id="hero"><div _ngcontent-xwr-c114="" class="bannertop d-flex flex-column justify-content-end align-items-end"><img _ngcontent-xwr-c114="" id="cover-img" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1742213474687-57ee6791-83e4-44c8-bf88-b93552815dc8.jpg"></div><div _ngcontent-xwr-c114="" class="slider-heading"><h1 _ngcontent-xwr-c114="">Tour Trip India Holidays </h1></div></section>
+    
+    
+    <main _ngcontent-xwr-c114="" id="main" class="main-container"><div _ngcontent-xwr-c114="" class="platform-text"><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" class="row guide_xtx"><div _ngcontent-xwr-c114="" class="col-md-4"><div _ngcontent-xwr-c114="" class="itinerary-tiles"><div _ngcontent-xwr-c114="" class="icon"><svg _ngcontent-xwr-c114="" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-xwr-c114="" d="M51 3H48V2C48 0.9 47.1 0 46 0C44.9 0 44 0.9 44 2V3H34V2C34 0.9 33.1 0 32 0C30.9 0 30 0.9 30 2V3H20V2C20 0.9 19.1 0 18 0C16.9 0 16 0.9 16 2V3H13C7.49 3 3 7.49 3 13V51C3 56.51 7.49 61 13 61H51C56.51 61 61 56.51 61 51V13C61 7.49 56.51 3 51 3ZM57 51C57 54.31 54.31 57 51 57H13C9.69 57 7 54.31 7 51V13C7 9.69 9.69 7 13 7H16V8C16 9.1 16.9 10 18 10C19.1 10 20 9.1 20 8V7H30V8C30 9.1 30.9 10 32 10C33.1 10 34 9.1 34 8V7H44V8C44 9.1 44.9 10 46 10C47.1 10 48 9.1 48 8V7H51C54.31 7 57 9.69 57 13V51Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M18 24C19.1046 24 20 23.1046 20 22C20 20.8954 19.1046 20 18 20C16.8954 20 16 20.8954 16 22C16 23.1046 16.8954 24 18 24Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M46 20C45.26 20 44.62 20.4 44.28 21H33.72C33.37 20.4 32.74 20 32 20C30.9 20 30 20.9 30 22C30 23.1 30.9 24 32 24C32.74 24 33.38 23.6 33.72 23H44.27C44.62 23.6 45.25 24 45.99 24C47.09 24 47.99 23.1 47.99 22C48 20.9 47.1 20 46 20Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M46 32C45.26 32 44.62 32.4 44.28 33H33.72C33.37 32.4 32.74 32 32 32C31.26 32 30.62 32.4 30.28 33H19.72C19.37 32.4 18.74 32 18 32C16.9 32 16 32.9 16 34C16 35.1 16.9 36 18 36C18.74 36 19.38 35.6 19.72 35H30.27C30.62 35.6 31.25 36 31.99 36C32.73 36 33.37 35.6 33.71 35H44.26C44.61 35.6 45.24 36 45.98 36C47.08 36 47.98 35.1 47.98 34C48 32.9 47.1 32 46 32Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M32 44C31.26 44 30.62 44.4 30.28 45H19.72C19.37 44.4 18.74 44 18 44C16.9 44 16 44.9 16 46C16 47.1 16.9 48 18 48C18.74 48 19.38 47.6 19.72 47H30.27C30.62 47.6 31.25 48 31.99 48C33.09 48 33.99 47.1 33.99 46C34 44.9 33.1 44 32 44Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M46 48C47.1046 48 48 47.1046 48 46C48 44.8954 47.1046 44 46 44C44.8954 44 44 44.8954 44 46C44 47.1046 44.8954 48 46 48Z" fill="#2662d9"></path></svg></div><div _ngcontent-xwr-c114="" class="tiles-data"><h4 _ngcontent-xwr-c114="" class="title"> 4 Days </h4><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div></div><div _ngcontent-xwr-c114="" class="col-md-4"><div _ngcontent-xwr-c114="" class="itinerary-tiles"><div _ngcontent-xwr-c114="" class="icon"><svg _ngcontent-xwr-c114="" width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-xwr-c114="" d="M39.98 41.17C39.55 40.33 39.03 39.5 38.4 38.71C38.16 38.4 37.9 38.1 37.63 37.82C34.05 33.96 28.46 32 21 32C12.99 32 7.12998 34.26 3.59998 38.71C-1.62002 45.29 0.34998 54.08 0.42998 54.45C0.63998 55.36 1.44998 56 2.37998 56H39.62C40.55 56 41.36 55.36 41.57 54.45C41.59 54.34 41.8 53.41 41.92 52C42.13 49.4 42.05 45.13 39.98 41.17ZM4.09998 52C3.85998 49.58 3.84998 44.81 6.74998 41.18C9.48998 37.74 14.29 36 21 36C26.96 36 31.41 37.37 34.25 40.09C34.61 40.43 34.94 40.79 35.25 41.18C35.81 41.88 36.26 42.62 36.62 43.37C38.14 46.55 38.09 50.04 37.9 52H4.09998Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M61.02 41.46C58.13 37.84 53.42 36 47 36C45.09 36 43.33 36.17 41.73 36.49C42.41 37.37 43.02 38.32 43.53 39.32C43.68 39.61 43.8 39.91 43.94 40.2C44.9 40.08 45.9 40 47 40C52.12 40 55.78 41.32 57.87 43.93C59.98 46.56 60.1 50.03 59.95 52H45.93C45.92 52.11 45.92 52.23 45.91 52.34C45.83 53.33 45.69 54.29 45.51 55.17L45.49 55.26L45.47 55.35C45.42 55.58 45.34 55.79 45.26 56H61.7C62.63 56 63.44 55.36 63.65 54.45C63.72 54.14 65.33 46.87 61.02 41.46Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M21.01 8H20.98C19.68 8 17.17 8.21 14.98 9.58C13.16 10.72 10.99 13.04 11 17.6C11.01 24.21 14.65 28 20.99 28H21.02C23.51 28 25.6 27.41 27.23 26.26C29.74 24.49 31.01 21.56 31 17.56C30.99 10.51 25.83 8 21.01 8ZM24.92 22.99C23.98 23.66 22.66 24 21.01 24C21 24 21 24 20.99 24C16.85 24 15.01 22.02 15 17.59C15 15.37 15.69 13.86 17.11 12.97C18.44 12.13 20.11 12 20.99 12C21 12 21 12 21.01 12C24.98 12 26.99 13.87 27 17.57C27 20.19 26.31 22.01 24.92 22.99Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M52.06 16.82C50.31 15.73 48.35 15.5 47.01 15.5C47 15.5 46.99 15.5 46.99 15.5C42.88 15.51 38.49 17.66 38.5 23.67C38.51 27.88 40.27 30 41.74 31.03C43.13 32.01 44.9 32.5 46.99 32.5C47 32.5 47.01 32.5 47.01 32.5C52.42 32.49 55.51 29.26 55.5 23.64C55.49 19.77 53.63 17.79 52.06 16.82ZM47.01 28.5C47 28.5 47 28.5 46.99 28.5C45.74 28.5 44.74 28.25 44.04 27.76C43.02 27.04 42.5 25.67 42.5 23.67C42.5 22.64 42.49 19.51 46.99 19.5C47 19.5 47 19.5 47.01 19.5C47.68 19.5 48.95 19.59 49.95 20.22C50.99 20.86 51.5 21.99 51.5 23.65C51.51 27.04 50.16 28.49 47.01 28.5Z" fill="#2662d9"></path></svg></div><div _ngcontent-xwr-c114="" class="tiles-data"><h4 _ngcontent-xwr-c114="" class="title">For 10</h4><p _ngcontent-xwr-c114="" class="description">Family</p></div></div></div><div _ngcontent-xwr-c114="" class="col-md-4"><div _ngcontent-xwr-c114="" class="itinerary-tiles"><div _ngcontent-xwr-c114="" class="icon"><svg _ngcontent-xwr-c114="" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-xwr-c114="" d="M61 0H27C25.35 0 24 1.35 24 3V61C24 62.65 25.35 64 27 64H61C62.65 64 64 62.65 64 61V3C64 1.35 62.65 0 61 0ZM59 56C57.34 56 56 57.34 56 59C56 59.35 56.07 59.69 56.18 60H31.82C31.93 59.69 32 59.35 32 59C32 57.34 30.66 56 29 56C28.65 56 28.31 56.07 28 56.18V7.82C28.31 7.93 28.65 8 29 8C30.66 8 32 6.66 32 5C32 4.65 31.93 4.31 31.82 4H56.19C56.07 4.31 56 4.65 56 5C56 6.66 57.34 8 59 8C59.35 8 59.69 7.93 60 7.82V56.19C59.69 56.07 59.35 56 59 56Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M44 40C48.4183 40 52 36.4183 52 32C52 27.5817 48.4183 24 44 24C39.5817 24 36 27.5817 36 32C36 36.4183 39.5817 40 44 40Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M44 48C45.1046 48 46 47.1046 46 46C46 44.8954 45.1046 44 44 44C42.8954 44 42 44.8954 42 46C42 47.1046 42.8954 48 44 48Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M44 20C45.1046 20 46 19.1046 46 18C46 16.8954 45.1046 16 44 16C42.8954 16 42 16.8954 42 18C42 19.1046 42.8954 20 44 20Z" fill="#2662d9"></path><path _ngcontent-xwr-c114="" d="M10 30C5.02 30 0 31.55 0 35V59C0 62.45 5.02 64 10 64C14.98 64 20 62.45 20 59V35C20 31.55 14.98 30 10 30ZM16 50.7C15.46 51.19 13.31 52 10 52C6.69 52 4.54 51.19 4 50.7V47.12C5.75 47.72 7.88 48 10 48C12.12 48 14.25 47.72 16 47.12V50.7ZM16 42.7C15.46 43.19 13.31 44 10 44C6.69 44 4.54 43.19 4 42.7V39.12C5.75 39.72 7.88 40 10 40C12.12 40 14.25 39.72 16 39.12V42.7ZM10 34C12.69 34 14.62 34.54 15.55 35C14.63 35.46 12.69 36 10 36C7.31 36 5.38 35.46 4.45 35C5.38 34.54 7.31 34 10 34ZM4 58.7V55.12C5.75 55.72 7.88 56 10 56C12.12 56 14.25 55.72 16 55.12V58.7C15.46 59.19 13.31 60 10 60C6.69 60 4.54 59.19 4 58.7Z" fill="#2662d9"></path></svg></div><div _ngcontent-xwr-c114="" id="overview" class="tiles-data"><h4 _ngcontent-xwr-c114="" class="title">$67,169</h4><p _ngcontent-xwr-c114="" class="description">TOTAL PRICE</p></div></div></div></div></div></div><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" class="row mb-5"><div _ngcontent-xwr-c114="" class="col-md-12"><div _ngcontent-xwr-c114="" class="itinerary-overview"><h4 _ngcontent-xwr-c114="">Itinerary Overview</h4><p _ngcontent-xwr-c114="">For a tour trip to India, consider destinations like the Golden Triangle (Delhi, Agra, Jaipur), Kerala's backwaters, Goa's beaches, or the Himalayas (Himachal Pradesh, Ladakh, Kashmir), depending on your interests and travel style</p></div></div></div><div _ngcontent-xwr-c114="" class="row"><div _ngcontent-xwr-c114="" class="col-md-12"><div _ngcontent-xwr-c114="" class="vue-map-container" style="height: 400px; width: 100%;"></div></div></div></div><section _ngcontent-xwr-c114="" id="maternity" class="about section-bg"><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" id="day-1171" class="row" style="padding-top: 90px;"><div _ngcontent-xwr-c114="" class="col-md-12"><div _ngcontent-xwr-c114="" class="itinerary-item"><div _ngcontent-xwr-c114="" class="itinerary-img"><div _ngcontent-xwr-c114="" class="cursor-pointer"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="cover-two-images row g-1 css3"><div _ngcontent-xwr-c114="" class="col-6"><picture _ngcontent-xwr-c114="" style="cursor: pointer;"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1743659761643-00b53089-4d0c-4429-9e6e-45bc9e677518.jpg"></picture></div><div _ngcontent-xwr-c114="" class="col-6"><div _ngcontent-xwr-c114="" class="two-vertical-images"><picture _ngcontent-xwr-c114="" style="cursor: pointer;"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1743742132316-c1374f61-25d3-4469-9491-6ddbdd6b0710.jpg"></picture><picture _ngcontent-xwr-c114="" style="cursor: pointer;"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1743660192608-d867d460-0374-481a-8c12-1c0f907dadb0.jpg"></picture></div></div></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="itinerary-top-opticy"><h4 _ngcontent-xwr-c114="">Day <span _ngcontent-xwr-c114="">1</span></h4><h4 _ngcontent-xwr-c114=""><i _ngcontent-xwr-c114="" class="bi bi-images"></i><span _ngcontent-xwr-c114="" style="font-size: 16px; font-weight: 600; margin-left: 5px;">3</span></h4></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div><div _ngcontent-xwr-c114="" class="itinerary-description"><div _ngcontent-xwr-c114="" class="itinerary-title"><label _ngcontent-xwr-c114=""> Delhi, India </label><br _ngcontent-xwr-c114=""><h4 _ngcontent-xwr-c114="">Golden Triangle</h4><br _ngcontent-xwr-c114=""></div><div _ngcontent-xwr-c114="" class="content"><p _ngcontent-xwr-c114=""><p>The Golden Triangle is a renowned and classic travel route in India that connects three historically and culturally rich cities—Delhi, Agra, and Jaipur—offering travelers a fascinating blend of architectural marvels, vibrant traditions, and deep historical significance, with highlights such as the majestic Taj Mahal in Agra, the grand palaces and forts of Jaipur, and the bustling markets, heritage sites, and modern attractions of Delhi.</p>
+</p></div><div _ngcontent-xwr-c114="" class="itinerary-card mt-4"><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Login-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1735299205358-6ab6fed7-db5e-4d09-b306-5acc687b45d1.jpeg"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI Activity </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example directions_run icon" fonticon="directions_run" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="directions_run" data-mat-icon-type="font" data-mat-icon-name="directions_run"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Adventure</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi bi-clock-fill"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Réunion </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><p>Upscale hotel near Hyde Park</p>
+
+<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+<p>Additional perks include:</p>
+
+<ul>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+</ul>
+
+<p>Room features</p>
+
+<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+<p>Other amenities include:</p>
+
+<ul>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#F&amp;B-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif" alt="1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI F&amp;B </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_dining icon" fonticon="local_dining" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="local_dining" data-mat-icon-type="font" data-mat-icon-name="local_dining"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Cafe</strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Thailand </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Transport-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734608836902-212e0d69-780f-4dba-a3e0-1c58dae82758.png" alt="1734608836902-212e0d69-780f-4dba-a3e0-1c58dae82758.png"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI Transportation </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example train icon" fonticon="train" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="train" data-mat-icon-type="font" data-mat-icon-name="train"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Car</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Goa, India - Gollapudi, Vijayawada, Andhra Pradesh, India </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></div></div></div></div></div><div _ngcontent-xwr-c114="" id="day-1172" class="row" style="padding-top: 90px;"><div _ngcontent-xwr-c114="" class="col-md-12"><div _ngcontent-xwr-c114="" class="itinerary-item"><div _ngcontent-xwr-c114="" class="itinerary-img"><div _ngcontent-xwr-c114="" class="cursor-pointer"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="cover-two-images row g-1 css2"><div _ngcontent-xwr-c114="" class="col-6"><picture _ngcontent-xwr-c114="" style="cursor: pointer;"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1743659936227-7816c80b-34c9-4ba5-b75a-eee753b876c3.jpg"></picture></div><div _ngcontent-xwr-c114="" class="col-6"><picture _ngcontent-xwr-c114="" style="cursor: pointer;"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1742450093762-a2cfbc6d-1f3e-423c-bb1d-7172bd61f59d.jpg"></picture></div></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="itinerary-top-opticy"><h4 _ngcontent-xwr-c114="">Day <span _ngcontent-xwr-c114="">2</span></h4><h4 _ngcontent-xwr-c114=""><i _ngcontent-xwr-c114="" class="bi bi-images"></i><span _ngcontent-xwr-c114="" style="font-size: 16px; font-weight: 600; margin-left: 5px;">2</span></h4></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div><div _ngcontent-xwr-c114="" class="itinerary-description"><div _ngcontent-xwr-c114="" class="itinerary-title"><label _ngcontent-xwr-c114=""> Kerala, India </label><br _ngcontent-xwr-c114=""><h4 _ngcontent-xwr-c114="">Kerala</h4><br _ngcontent-xwr-c114=""></div><div _ngcontent-xwr-c114="" class="content"><p _ngcontent-xwr-c114=""><p>Kerala, often referred to as "God’s Own Country," is a breathtaking travel destination in southern India, renowned for its serene backwaters, palm-fringed beaches, and lush green landscapes, offering visitors a perfect escape into nature with its tranquil houseboat cruises, picturesque hill stations, vibrant wildlife sanctuaries, and rich cultural heritage, making it an ideal choice for those seeking a peaceful and rejuvenating holiday experience.</p>
+</p></div><div _ngcontent-xwr-c114="" class="itinerary-card mt-4"><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#F&amp;B-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif" alt="1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI F&amp;B </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_dining icon" fonticon="local_dining" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="local_dining" data-mat-icon-type="font" data-mat-icon-name="local_dining"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Cafe</strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Thailand </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Transport-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734608836902-212e0d69-780f-4dba-a3e0-1c58dae82758.png" alt="1734608836902-212e0d69-780f-4dba-a3e0-1c58dae82758.png"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI Transportation </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example train icon" fonticon="train" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="train" data-mat-icon-type="font" data-mat-icon-name="train"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Car</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Goa, India - Gollapudi, Vijayawada, Andhra Pradesh, India </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Service-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734674698526-daf52d4f-4eb8-41c3-9dbd-2509448144c5.jpg"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI Service </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><i _ngcontent-xwr-c114="" class="bi bi-boxes" style="color: #2662d9;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Service</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi bi-clock-fill"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA - NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Egypt </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--></div></div></div></div></div><div _ngcontent-xwr-c114="" id="day-1173" class="row" style="padding-top: 90px;"><div _ngcontent-xwr-c114="" class="col-md-12"><div _ngcontent-xwr-c114="" class="itinerary-item"><div _ngcontent-xwr-c114="" class="itinerary-img"><div _ngcontent-xwr-c114="" class="cursor-pointer"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="css1"><picture _ngcontent-xwr-c114="" style="cursor: pointer;"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1743660063577-d11aa848-72e7-449f-a10d-c9d86ff6d334.jpg"></picture></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="itinerary-top-opticy"><h4 _ngcontent-xwr-c114="">Day <span _ngcontent-xwr-c114="">3</span></h4></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div><div _ngcontent-xwr-c114="" class="itinerary-description"><div _ngcontent-xwr-c114="" class="itinerary-title"><label _ngcontent-xwr-c114=""> Goa, India </label><br _ngcontent-xwr-c114=""><h4 _ngcontent-xwr-c114="">Goa</h4><br _ngcontent-xwr-c114=""></div><div _ngcontent-xwr-c114="" class="content"><p _ngcontent-xwr-c114=""><p>Goa, one of India's most sought-after travel destinations, is famous for its pristine sandy beaches, vibrant nightlife, and thrilling water sports, attracting tourists from around the world who seek a perfect blend of relaxation and adventure, with its lively beach shacks, historic Portuguese architecture, bustling flea markets, and a wide range of activities, including jet skiing, parasailing, and scuba diving, making it an ideal getaway for both leisure seekers and thrill enthusiasts alike</p>
+</p></div><div _ngcontent-xwr-c114="" class="itinerary-card mt-4"><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Login-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1735299205358-6ab6fed7-db5e-4d09-b306-5acc687b45d1.jpeg"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI Activity </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example directions_run icon" fonticon="directions_run" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="directions_run" data-mat-icon-type="font" data-mat-icon-name="directions_run"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Adventure</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi bi-clock-fill"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Réunion </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><p>Upscale hotel near Hyde Park</p>
+
+<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+<p>Additional perks include:</p>
+
+<ul>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+</ul>
+
+<p>Room features</p>
+
+<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+<p>Other amenities include:</p>
+
+<ul>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#F&amp;B-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif" alt="1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI F&amp;B </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_dining icon" fonticon="local_dining" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="local_dining" data-mat-icon-type="font" data-mat-icon-name="local_dining"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Cafe</strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Thailand </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Accommodation-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734673720728-16e50060-226e-485b-91f7-5698190044f9.jpg"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI accommodation </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_hotel icon" fonticon="local_hotel" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="local_hotel" data-mat-icon-type="font" data-mat-icon-name="local_hotel"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Hotel</strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> 4 </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Yogyakarta, Yogyakarta City, Special Region of Yogyakarta, Indonesia </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></div></div></div></div></div><div _ngcontent-xwr-c114="" id="day-1174" class="row" style="padding-top: 90px;"><div _ngcontent-xwr-c114="" class="col-md-12"><div _ngcontent-xwr-c114="" class="itinerary-item"><div _ngcontent-xwr-c114="" class="itinerary-img"><div _ngcontent-xwr-c114="" class="cursor-pointer"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="css1"><picture _ngcontent-xwr-c114="" style="cursor: pointer;"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1743660192608-d867d460-0374-481a-8c12-1c0f907dadb0.jpg"></picture></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-xwr-c114="" class="itinerary-top-opticy"><h4 _ngcontent-xwr-c114="">Day <span _ngcontent-xwr-c114="">4</span></h4></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div><div _ngcontent-xwr-c114="" class="itinerary-description"><div _ngcontent-xwr-c114="" class="itinerary-title"><label _ngcontent-xwr-c114=""> Bageshwar, Uttarakhand 263001, India </label><br _ngcontent-xwr-c114=""><h4 _ngcontent-xwr-c114="">Himalayas</h4><br _ngcontent-xwr-c114=""></div><div _ngcontent-xwr-c114="" class="content"><p _ngcontent-xwr-c114=""><p>The Himalayas, a majestic mountain range stretching across northern India, offer an unparalleled blend of adventure, natural beauty, and cultural richness, with breathtaking destinations such as Himachal Pradesh, Ladakh, and Kashmir, where travelers can immerse themselves in stunning landscapes, snow-capped peaks, lush valleys, and serene lakes while indulging in thrilling activities like trekking, river rafting, skiing, and mountaineering, making it a paradise for nature lovers, adventure enthusiasts, and spiritual seekers alike.</p>
+</p></div><div _ngcontent-xwr-c114="" class="itinerary-card mt-4"><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Login-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1735299205358-6ab6fed7-db5e-4d09-b306-5acc687b45d1.jpeg"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI Activity </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example directions_run icon" fonticon="directions_run" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="directions_run" data-mat-icon-type="font" data-mat-icon-name="directions_run"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Adventure</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi bi-clock-fill"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Réunion </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><p>Upscale hotel near Hyde Park</p>
+
+<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+<p>Additional perks include:</p>
+
+<ul>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+</ul>
+
+<p>Room features</p>
+
+<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+<p>Other amenities include:</p>
+
+<ul>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#F&amp;B-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif" alt="1734671597998-aaf56665-a42a-4e71-9e7d-164a0634018a.jfif"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI F&amp;B </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_dining icon" fonticon="local_dining" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="local_dining" data-mat-icon-type="font" data-mat-icon-name="local_dining"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Cafe</strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Thailand </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Transport-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734608836902-212e0d69-780f-4dba-a3e0-1c58dae82758.png" alt="1734608836902-212e0d69-780f-4dba-a3e0-1c58dae82758.png"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI Transportation </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example train icon" fonticon="train" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="train" data-mat-icon-type="font" data-mat-icon-name="train"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Car</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Goa, India - Gollapudi, Vijayawada, Andhra Pradesh, India </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-xwr-c114="" class="media_"><a _ngcontent-xwr-c114="" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#Accommodation-modal"><div _ngcontent-xwr-c114="" class="media_picture"><img _ngcontent-xwr-c114="" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/1734673720728-16e50060-226e-485b-91f7-5698190044f9.jpg"></div><div _ngcontent-xwr-c114="" class="media__body"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har"> MINI accommodation </h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_hotel icon" fonticon="local_hotel" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="local_hotel" data-mat-icon-type="font" data-mat-icon-name="local_hotel"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Hotel</strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> 4 </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line"> Yogyakarta, Yogyakarta City, Special Region of Yogyakarta, Indonesia </strong></div><div _ngcontent-xwr-c114="" class="ellipsis-two-lines"><ul>
+	<li>
+	<p>Upscale hotel near Hyde Park</p>
+
+	<p>Near Buckingham Palace and Westminster Abbey, Hotel Riu Plaza London Victoria provides a free breakfast buffet, dry cleaning/laundry services, and a bar. The on-site restaurant, Tastes, serves dinner. In addition to a 24-hour gym, guests can connect to free in-room WiFi.</p>
+
+	<p>Additional perks include:</p>
+	</li>
+	<li>An elevator, luggage storage, and a 24-hour front desk</li>
+	<li>Smoke-free premises</li>
+	<li>Guest reviews say great things the breakfast, central location, and helpful staff</li>
+	<li>
+	<p>Room features</p>
+
+	<p>All 435 rooms boast comforts such as laptop-friendly workspaces and air conditioning, in addition to perks like free WiFi and safes. Guest reviews speak positively of the clean, spacious rooms at the property.</p>
+
+	<p>Other amenities include:</p>
+	</li>
+	<li>Bathrooms with free toiletries</li>
+	<li>42-inch LED TVs with satellite channels</li>
+	<li>Wardrobes/closets, LED light bulbs, and electric kettles</li>
+</ul>
+</div></div></div></a></div><!--ng-container--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></div></div></div></div></div><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></div></section><section _ngcontent-xwr-c114="" id="price" class="services"><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" class="row"><div _ngcontent-xwr-c114="" class="col-lg-12 col-md-12 col-sm-12"><div _ngcontent-xwr-c114="" class="price-main"><h5 _ngcontent-xwr-c114="" class="font-weight-bold">Total Trip Price:</h5><h2 _ngcontent-xwr-c114="">$67,169<span _ngcontent-xwr-c114="">*including all taxes</span></h2></div></div></div></div></section><section _ngcontent-xwr-c114="" class="include-exclude mt-5 mb-5"><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" class="row"><div _ngcontent-xwr-c114="" class="col-lg-4 col-md-4 col-sm-4 col-12"><div _ngcontent-xwr-c114="" class="include-card h-100"><div _ngcontent-xwr-c114="" class="include-icon"><svg _ngcontent-xwr-c114="" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle _ngcontent-xwr-c114="" cx="24" cy="24" r="22.75" stroke="#2662D9" stroke-width="2.5"></circle><path _ngcontent-xwr-c114="" d="M32.3906 15.9375C32.625 15.7031 33 15.7031 33.1875 15.9375L34.5469 17.25C34.7344 17.4844 34.7344 17.8594 34.5469 18.0469L20.4844 32.1094C20.25 32.3438 19.9219 32.3438 19.6875 32.1094L13.4062 25.875C13.2188 25.6406 13.2188 25.2656 13.4062 25.0781L14.7656 23.7188C14.9531 23.5312 15.3281 23.5312 15.5625 23.7188L20.0625 28.2656L32.3906 15.9375Z" fill="#2662D9"></path></svg></div><h4 _ngcontent-xwr-c114="" class="text-left">Includes</h4><ul _ngcontent-xwr-c114=""><li _ngcontent-xwr-c114="">Day 1 - MINI Activity, MINI F&amp;B, MINI Transportation</li></ul><ul _ngcontent-xwr-c114=""><li _ngcontent-xwr-c114="">Day 3 - MINI Activity, MINI accommodation, MINI F&amp;B</li></ul><ul _ngcontent-xwr-c114=""><li _ngcontent-xwr-c114="">Day 4 - MINI Activity, MINI F&amp;B, MINI accommodation, MINI Transportation</li></ul><ul _ngcontent-xwr-c114=""><li _ngcontent-xwr-c114="">Day 2 - MINI Service, MINI F&amp;B, MINI Transportation</li></ul><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></div></div><div _ngcontent-xwr-c114="" class="col-lg-4 col-md-4 col-sm-4 col-12"><div _ngcontent-xwr-c114="" class="include-card h-100"><div _ngcontent-xwr-c114="" class="include-icon"><svg _ngcontent-xwr-c114="" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle _ngcontent-xwr-c114="" cx="24" cy="24" r="22.75" stroke="#2662D9" stroke-width="2.5"></circle><path _ngcontent-xwr-c114="" d="M26.2031 24L31.2656 29.0625C31.5469 29.3438 31.5469 29.8594 31.2656 30.1406L30.0938 31.3125C29.8125 31.5938 29.2969 31.5938 29.0156 31.3125L24 26.25L18.9375 31.3125C18.6562 31.5938 18.1406 31.5938 17.8594 31.3125L16.6875 30.1406C16.4062 29.8594 16.4062 29.3438 16.6875 29.0625L21.75 24L16.6875 18.9844C16.4062 18.7031 16.4062 18.1875 16.6875 17.9062L17.8594 16.7344C18.1406 16.4531 18.6562 16.4531 18.9375 16.7344L24 21.7969L29.0156 16.7344C29.2969 16.4531 29.8125 16.4531 30.0938 16.7344L31.2656 17.9062C31.5469 18.1875 31.5469 18.7031 31.2656 18.9844L26.2031 24Z" fill="#2662D9"></path></svg></div><h4 _ngcontent-xwr-c114="" class="text-left">Self Pay</h4><ul _ngcontent-xwr-c114=""><li _ngcontent-xwr-c114="">Could you clarify what you mean by "Self Pay"? Are you referring to self-payment in healthcare, finance, travel, or some other context</li></ul><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--></div></div><div _ngcontent-xwr-c114="" class="col-lg-4 col-md-4 col-sm-4 col-12"><div _ngcontent-xwr-c114="" class="include-card h-100"><div _ngcontent-xwr-c114="" class="include-icon"><svg _ngcontent-xwr-c114="" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle _ngcontent-xwr-c114="" cx="24" cy="24" r="22.75" stroke="#2662D9" stroke-width="2.5"></circle><path _ngcontent-xwr-c114="" d="M26.2031 24L31.2656 29.0625C31.5469 29.3438 31.5469 29.8594 31.2656 30.1406L30.0938 31.3125C29.8125 31.5938 29.2969 31.5938 29.0156 31.3125L24 26.25L18.9375 31.3125C18.6562 31.5938 18.1406 31.5938 17.8594 31.3125L16.6875 30.1406C16.4062 29.8594 16.4062 29.3438 16.6875 29.0625L21.75 24L16.6875 18.9844C16.4062 18.7031 16.4062 18.1875 16.6875 17.9062L17.8594 16.7344C18.1406 16.4531 18.6562 16.4531 18.9375 16.7344L24 21.7969L29.0156 16.7344C29.2969 16.4531 29.8125 16.4531 30.0938 16.7344L31.2656 17.9062C31.5469 18.1875 31.5469 18.7031 31.2656 18.9844L26.2031 24Z" fill="#2662D9"></path></svg></div><h4 _ngcontent-xwr-c114="" class="text-left">Excludes</h4><ul _ngcontent-xwr-c114=""><li _ngcontent-xwr-c114="">Could you clarify what "Self Pay Excludes" refers to? Are you asking about what is not covered under self-payment in a specific context, such as healthcare, travel, or finance</li></ul><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--></div></div></div></div></section><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><section _ngcontent-xwr-c114="" class="include-exclude mt-4 mb-5"><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" class="row"><div _ngcontent-xwr-c114="" class="col-lg-12 col-md-12 col-sm-12 col-12"><h4 _ngcontent-xwr-c114="" class="exclude-txtile">Additional details</h4><div _ngcontent-xwr-c114="" class="additional_details_content"><div _ngcontent-xwr-c114=""><p>Could you provide more context on what you mean by <strong>"Self Pay Excludes"</strong> and what additional details you are looking for? Are you referring to self-payment in <strong>healthcare, travel, shopping, or another field</strong>? Let me know so I can give you the most relevant information!</p>
+</div></div></div></div></div></section><!--bindings={
+  "ng-reflect-ng-if": "<p>Could you provide more cont"
+}--><div _ngcontent-xwr-c114="" id="travel_agent" class="div"></div><section _ngcontent-xwr-c114="" id="About" class="About"><div _ngcontent-xwr-c114="" class="about-logo"><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" class="row"><div _ngcontent-xwr-c114="" class="col-lg-12 col-md-12 col-sm-12"><div _ngcontent-xwr-c114="" class="travel-agent"><div _ngcontent-xwr-c114="" class="media border"><div _ngcontent-xwr-c114="" class="media-body"><div _ngcontent-xwr-c114="" class="d-flex align-items-center"><div _ngcontent-xwr-c114="" class="agent-pictures"><picture _ngcontent-xwr-c114=""><img _ngcontent-xwr-c114="" src="../../../assets/img/people19.png"></picture></div><div _ngcontent-xwr-c114="" class="agent-data"><h5 _ngcontent-xwr-c114="" class="mb-4">This proposal was prepared by</h5><h2 _ngcontent-xwr-c114="">Rahul Trivedi</h2><h5 _ngcontent-xwr-c114="" class="travel-name mb-4">Blueberry Travel</h5><div _ngcontent-xwr-c114="" class="d-flex inner-data"><div _ngcontent-xwr-c114="" class="w-50">Proposal ID:</div><div _ngcontent-xwr-c114="" class="w-50">#318</div></div></div><div _ngcontent-xwr-c114="" class="agent_data_pro"><ul _ngcontent-xwr-c114=""><li _ngcontent-xwr-c114=""><div _ngcontent-xwr-c114=""><i _ngcontent-xwr-c114="" class="bi-envelope-fill"></i><span _ngcontent-xwr-c114="">rahulqa@gmail.com</span></div></li><li _ngcontent-xwr-c114=""><div _ngcontent-xwr-c114=""><i _ngcontent-xwr-c114="" class="bi-telephone-fill"></i><span _ngcontent-xwr-c114="">9009090909</span></div></li><li _ngcontent-xwr-c114=""><div _ngcontent-xwr-c114=""><i _ngcontent-xwr-c114="" class="bi-globe2"></i><span _ngcontent-xwr-c114="">blueberry-travel.com</span></div></li><li _ngcontent-xwr-c114=""><div _ngcontent-xwr-c114=""><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i><span _ngcontent-xwr-c114="">JANAKPURI, DELHI</span></div></li></ul></div></div></div></div></div></div></div></div></div></section><section _ngcontent-xwr-c114="" id="contact" class="contact"><div _ngcontent-xwr-c114="" class="container max-container"><div _ngcontent-xwr-c114="" class="section-title"><h3 _ngcontent-xwr-c114=""><span _ngcontent-xwr-c114="">Frequently Asked Questions</span></h3></div><div _ngcontent-xwr-c114="" id="faq" class="row" style="position: relative;"><div _ngcontent-xwr-c114="" class="col-lg-12 col-md-12 col-sm-12"><div _ngcontent-xwr-c114=""><div _ngcontent-xwr-c114="" id="accordionExample" class="accordion"><div _ngcontent-xwr-c114="" class="accordion-item"><h2 _ngcontent-xwr-c114="" id="headingOne" class="accordion-header"><button _ngcontent-xwr-c114="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="accordion-button"> Payment Conditions </button></h2><div _ngcontent-xwr-c114="" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample" class="accordion-collapse collapse show"><div _ngcontent-xwr-c114="" class="accordion-body"><p>Could you clarify the context in which you're asking about <strong>payment conditions</strong>? Are you referring to <strong>self-pay policies in healthcare, travel bookings, online purchases, or another industry</strong>? Let me know so I can provide the most relevant details!</p>
+</div></div></div><div _ngcontent-xwr-c114="" class="accordion-item"><h2 _ngcontent-xwr-c114="" id="headingTwo" class="accordion-header"><button _ngcontent-xwr-c114="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="accordion-button collapsed"> Cancellation Conditions </button></h2><div _ngcontent-xwr-c114="" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" class="accordion-collapse collapse"><div _ngcontent-xwr-c114="" class="accordion-body"><p>Cancellation conditions typically outline the rules and policies regarding the cancellation of a service, booking, or purchase. These conditions may vary depending on the industry. Here are some general guidelines based on different sectors:</p>
+
+<h3><strong>1. Travel &amp; Hotel Bookings:</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Free Cancellation:</strong> Some bookings allow cancellations without charges if done within a specific timeframe.</p>
+	</li>
+	<li>
+	<p><strong>Partial Refund:</strong> A percentage of the booking amount may be refunded if canceled after a certain period.</p>
+	</li>
+	<li>
+	<p><strong>Non-Refundable:</strong> Some bookings are strictly non-refundable, meaning no money is returned upon cancellation.</p>
+	</li>
+	<li>
+	<p><strong>Last-Minute Cancellation Fee:</strong> A penalty fee may apply if canceled close to the check-in or travel date.</p>
+	</li>
+</ul>
+
+<h3><strong>2. Healthcare &amp; Appointments:</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>No Charge Cancellation:</strong> If canceled within a specified notice period (e.g., 24–48 hours in advance).</p>
+	</li>
+	<li>
+	<p><strong>Late Cancellation Fee:</strong> If canceled after the notice period, a fee may be charged.</p>
+	</li>
+	<li>
+	<p><strong>No Refund for Missed Appointments:</strong> Some services do not provide a refund if the appointment is missed without prior notice.</p>
+	</li>
+</ul>
+
+<h3><strong>3. Online Shopping &amp; Subscriptions:</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Return &amp; Refund Policies:</strong> Many e-commerce platforms allow cancellations before shipping, with full refunds.</p>
+	</li>
+	<li>
+	<p><strong>Subscription Cancellation:</strong> Some services allow immediate cancellation, while others continue until the end of the billing cycle.</p>
+	</li>
+	<li>
+	<p><strong>Restocking Fees:</strong> Some stores charge a restocking fee if an item is returned after cancellation.</p>
+	</li>
+</ul>
+
+<h3><strong>4. Event Tickets &amp; Entertainment:</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Non-Refundable Tickets:</strong> Many events, concerts, and movie tickets do not allow cancellations or refunds.</p>
+	</li>
+	<li>
+	<p><strong>Flexible Cancellation:</strong> Some ticket providers offer refunds or rescheduling options with conditions</p>
+	</li>
+</ul>
+</div></div></div><div _ngcontent-xwr-c114="" class="accordion-item"><h2 _ngcontent-xwr-c114="" id="headingThree" class="accordion-header"><button _ngcontent-xwr-c114="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="accordion-button collapsed"> Passport &amp; Visa </button></h2><div _ngcontent-xwr-c114="" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample" class="accordion-collapse collapse"><div _ngcontent-xwr-c114="" class="accordion-body"><h3><strong>Cancellation Conditions for Passport &amp; Visas</strong></h3>
+
+<p>The cancellation and refund policies for passports and visas depend on the issuing authority and the type of service applied for. Below are general guidelines:</p>
+
+<h3><strong>1. Passport Cancellation Conditions</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Before Processing Begins:</strong> If the application is canceled before processing starts, a partial refund may be available, depending on the authority's policies.</p>
+	</li>
+	<li>
+	<p><strong>After Processing Starts:</strong> Once processing has begun, cancellation is usually possible, but refunds may not be granted.</p>
+	</li>
+	<li>
+	<p><strong>Issued Passports:</strong> If a passport has already been issued, cancellation is generally not allowed. However, in certain cases (e.g., incorrect details or fraud detection), it may be revoked by the issuing authority.</p>
+	</li>
+	<li>
+	<p><strong>Application Fee Refund:</strong> Most government agencies do not refund application fees after submission, even if the passport is not issued.</p>
+	</li>
+</ul>
+
+<h3><strong>2. Visa Cancellation Conditions</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Before Submission:</strong> If the visa application has not been submitted, it can be canceled with no penalties.</p>
+	</li>
+	<li>
+	<p><strong>After Submission but Before Approval:</strong> Some embassies allow cancellations at this stage, but the visa fee is often non-refundable.</p>
+	</li>
+	<li>
+	<p><strong>After Visa Approval:</strong> If the visa is already approved and issued, cancellation is generally not possible, and fees are non-refundable.</p>
+	</li>
+	<li>
+	<p><strong>Expired or Unused Visas:</strong> Some countries require travelers to report an unused visa, while others automatically void it if not used before expiration.</p>
+	</li>
+</ul>
+</div></div></div><div _ngcontent-xwr-c114="" class="accordion-item"><h2 _ngcontent-xwr-c114="" id="headingFour" class="accordion-header"><button _ngcontent-xwr-c114="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="accordion-button collapsed"> Medical Advice </button></h2><div _ngcontent-xwr-c114="" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordionExample" class="accordion-collapse collapse"><div _ngcontent-xwr-c114="" class="accordion-body"><h3><strong>Medical Advice Cancellation Conditions</strong></h3>
+
+<p>Cancellation policies for medical advice or healthcare consultations vary based on the provider, type of service, and booking method. Below are general conditions:</p>
+
+<h3><strong>1. Telemedicine &amp; Online Consultations</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Free Cancellation:</strong> Some platforms allow free cancellation <strong>within a specified timeframe</strong> (e.g., 24–48 hours before the appointment).</p>
+	</li>
+	<li>
+	<p><strong>Late Cancellation Fees:</strong> If canceled <strong>within a few hours of the scheduled time</strong>, a partial or full fee may be charged.</p>
+	</li>
+	<li>
+	<p><strong>No Refund for Missed Appointments:</strong> Many services do not offer refunds if the patient does not show up or cancels last minute.</p>
+	</li>
+</ul>
+
+<h3><strong>2. In-Person Doctor Appointments</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Cancellation with Full Refund:</strong> Many clinics and hospitals allow free cancellations if done at least <strong>24–48 hours in advance</strong>.</p>
+	</li>
+	<li>
+	<p><strong>Late Cancellation Charges:</strong> If canceled on the same day or within a few hours of the appointment, a fee may apply.</p>
+	</li>
+	<li>
+	<p><strong>Non-Refundable Booking Fees:</strong> Some private healthcare providers charge <strong>a non-refundable consultation fee</strong> upon booking.</p>
+	</li>
+</ul>
+
+<h3><strong>3. Second Opinions &amp; Specialist Consultations</strong></h3>
+
+<ul>
+	<li>
+	<p>Some specialist consultations require <strong>advance payment</strong>, and cancellation may result in a <strong>partial refund or rescheduling option</strong>.</p>
+	</li>
+	<li>
+	<p><strong>Hospitals and high-demand specialists may have stricter policies</strong> where cancellations result in <strong>no refunds</strong>.</p>
+	</li>
+</ul>
+
+<h3><strong>4. Surgery &amp; Medical Procedures</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Elective Procedures:</strong> Most hospitals and clinics require <strong>advance notice (at least 48–72 hours)</strong> for cancellations to avoid fees.</p>
+	</li>
+	<li>
+	<p><strong>Emergency Situations:</strong> If a procedure is canceled due to a <strong>medical emergency</strong>, many providers allow rescheduling without extra charges.</p>
+	</li>
+	<li>
+	<p><strong>Non-Refundable Deposits:</strong> Some private hospitals and clinics require a <strong>deposit</strong>, which may not be refundable if canceled close to the procedure date.</p>
+	</li>
+</ul>
+</div></div></div><div _ngcontent-xwr-c114="" class="accordion-item"><h2 _ngcontent-xwr-c114="" id="headingFive" class="accordion-header"><button _ngcontent-xwr-c114="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" class="accordion-button collapsed"> Travel Insurance </button></h2><div _ngcontent-xwr-c114="" id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#accordionExample" class="accordion-collapse collapse"><div _ngcontent-xwr-c114="" class="accordion-body"><h3><strong>Cancellation Conditions for Travel Insurance</strong></h3>
+
+<p>The cancellation policy for travel insurance varies based on the provider, policy type, and timing of the cancellation. Below are the general conditions:</p>
+
+<h3><strong>1. Free Look Period (Full Refund)</strong></h3>
+
+<ul>
+	<li>
+	<p>Most insurance companies offer a <strong>"free look" or cooling-off period</strong> (usually <strong>10 to 15 days</strong> after purchase) during which you can cancel the policy for a <strong>full refund</strong> if no claims have been made.</p>
+	</li>
+	<li>
+	<p>This applies mainly to policies purchased well in advance of the trip.</p>
+	</li>
+</ul>
+
+<h3><strong>2. Cancellation Before the Trip Starts</strong></h3>
+
+<ul>
+	<li>
+	<p>If you cancel <strong>before the trip starts</strong> but after the free look period, a <strong>partial refund</strong> may be available, depending on the insurer.</p>
+	</li>
+	<li>
+	<p>Some insurers deduct administrative fees.</p>
+	</li>
+	<li>
+	<p>If the trip is canceled for a covered reason (e.g., medical emergency), you may be eligible for a refund under <strong>trip cancellation coverage</strong>.</p>
+	</li>
+</ul>
+
+<h3><strong>3. Cancellation After the Trip Starts</strong></h3>
+
+<ul>
+	<li>
+	<p><strong>Non-Refundable:</strong> Once the trip has started, most insurers do not allow cancellations or refunds.</p>
+	</li>
+	<li>
+	<p><strong>Partial Refund (Pro-Rata Basis):</strong> Some insurers may offer a <strong>partial refund</strong> for long-term policies if canceled early and no claims have been made.</p>
+	</li>
+</ul>
+
+<h3><strong>4. Non-Refundable Situations</strong></h3>
+
+<ul>
+	<li>
+	<p>If a <strong>claim has already been filed</strong>, cancellation is typically not allowed.</p>
+	</li>
+	<li>
+	<p>Some policies with <strong>"cancel for any reason" (CFAR)</strong> coverage may allow cancellation but will only refund a <strong>percentage (50–75%)</strong> of the trip cost.</p>
+	</li>
+	<li>
+	<p>Single-trip policies are usually <strong>non-refundable</strong> once the coverage period begins</p>
+	</li>
+</ul>
+</div></div></div></div></div></div></div></div></section></main><footer _ngcontent-xwr-c114="" id="footer"><div _ngcontent-xwr-c114="" class="container"><div _ngcontent-xwr-c114="" class="credits"> Copyright © 2024 <span _ngcontent-xwr-c114="">Blueberry Travel</span>. All Rights Reserved </div></div></footer><div _ngcontent-xwr-c114="" id="Login-modal" tabindex="-1" aria-labelledby="Login-modalLabel" aria-hidden="true" data-bs-keyboard="true" data-bs-backdrop="true" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal-lg Login-_modal"><div _ngcontent-xwr-c114="" class="modal-content"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close"></button><div _ngcontent-xwr-c114="" class="modal-body"><div _ngcontent-xwr-c114="" class="modal_day_data"><div _ngcontent-xwr-c114="" class="slider_day"><div _ngcontent-xwr-c114="" id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide"><div _ngcontent-xwr-c114="" class="carousel-indicators"></div><div _ngcontent-xwr-c114="" class="carousel-inner"><div _ngcontent-xwr-c114="" class="carousel-item active"><img _ngcontent-xwr-c114="" class="d-block w-100" src="../../../assets/img/bg_slider.png"></div></div></div></div><div _ngcontent-xwr-c114="" class="media__body py-3"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har">NA</h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example directions_run icon" fonticon="directions_run" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important;" ng-reflect-font-icon="directions_run" data-mat-icon-type="font" data-mat-icon-name="directions_run"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> Adventure </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi bi-clock-fill"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line2"> NA </strong></div><div _ngcontent-xwr-c114=""></div></div></div></div></div></div></div></div><div _ngcontent-xwr-c114="" id="Transport-modal" tabindex="-1" aria-labelledby="Transport-modalLabel" aria-hidden="true" data-bs-keyboard="true" data-bs-backdrop="true" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal-lg Login-_modal"><div _ngcontent-xwr-c114="" class="modal-content"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close"></button><div _ngcontent-xwr-c114="" class="modal-body"><div _ngcontent-xwr-c114="" class="modal_day_data"><div _ngcontent-xwr-c114="" class="slider_day"><div _ngcontent-xwr-c114="" id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide"><div _ngcontent-xwr-c114="" class="carousel-indicators"></div><div _ngcontent-xwr-c114="" class="carousel-inner"><div _ngcontent-xwr-c114="" class="carousel-item active"><img _ngcontent-xwr-c114="" class="d-block w-100" src="../../../assets/img/bg_slider.png"></div></div></div></div><div _ngcontent-xwr-c114="" class="media__body py-3"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har">NA</h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example train icon" fonticon="train" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important; color: #2662d9;" ng-reflect-font-icon="train" data-mat-icon-type="font" data-mat-icon-name="train"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> Car </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line2"> NA - NA </strong></div><div _ngcontent-xwr-c114=""></div></div></div></div></div></div></div></div><div _ngcontent-xwr-c114="" id="Accommodation-modal" tabindex="-1" aria-labelledby="Accommodation" aria-hidden="true" data-bs-keyboard="true" data-bs-backdrop="true" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal-lg Login-_modal"><div _ngcontent-xwr-c114="" class="modal-content"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close"></button><div _ngcontent-xwr-c114="" class="modal-body"><div _ngcontent-xwr-c114="" class="modal_day_data"><div _ngcontent-xwr-c114="" class="slider_day"><div _ngcontent-xwr-c114="" id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide"><div _ngcontent-xwr-c114="" class="carousel-indicators"></div><div _ngcontent-xwr-c114="" class="carousel-inner"><div _ngcontent-xwr-c114="" class="carousel-item active"><img _ngcontent-xwr-c114="" class="d-block w-100" src="../../../assets/img/bg_slider.png"></div></div></div></div><div _ngcontent-xwr-c114="" class="media__body py-3"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har">NA</h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_hotel icon" fonticon="local_hotel" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important;" ng-reflect-font-icon="local_hotel" data-mat-icon-type="font" data-mat-icon-name="local_hotel"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> HOTEL </strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location pr-2"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line2"> NA </strong></div><div _ngcontent-xwr-c114=""></div></div></div></div></div></div></div></div><div _ngcontent-xwr-c114="" id="F&amp;B-modal" tabindex="-1" aria-labelledby="F&amp;B-modal" aria-hidden="true" data-bs-keyboard="true" data-bs-backdrop="true" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal-lg Login-_modal"><div _ngcontent-xwr-c114="" class="modal-content"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close"></button><div _ngcontent-xwr-c114="" class="modal-body"><div _ngcontent-xwr-c114="" class="modal_day_data"><div _ngcontent-xwr-c114="" class="slider_day"><div _ngcontent-xwr-c114="" id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide"><div _ngcontent-xwr-c114="" class="carousel-indicators"></div><div _ngcontent-xwr-c114="" class="carousel-inner"><div _ngcontent-xwr-c114="" class="carousel-item active"><img _ngcontent-xwr-c114="" class="d-block w-100" src="../../../assets/img/bg_slider.png"></div></div></div></div><div _ngcontent-xwr-c114="" class="media__body py-3"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har">NA</h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><mat-icon _ngcontent-xwr-c114="" role="img" aria-hidden="false" aria-label="Example local_dining icon" fonticon="local_dining" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" style="font-family: 'Material Icons' !important; font-size: 15px !important;" ng-reflect-font-icon="local_dining" data-mat-icon-type="font" data-mat-icon-name="local_dining"></mat-icon></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> Cafe </strong><span _ngcontent-xwr-c114="" class="b-location" style="background-color: rgba(255, 170, 0, .1);"><i _ngcontent-xwr-c114="" class="bi-star-fill" style="color: #ffaa00;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line2"> NA </strong></div><div _ngcontent-xwr-c114=""></div></div></div></div></div></div></div></div><div _ngcontent-xwr-c114="" id="Service-modal" tabindex="-1" aria-labelledby="F&amp;B-modal" aria-hidden="true" data-bs-keyboard="true" data-bs-backdrop="true" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal-lg Service-_modal"><div _ngcontent-xwr-c114="" class="modal-content"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close"></button><div _ngcontent-xwr-c114="" class="modal-body"><div _ngcontent-xwr-c114="" class="modal_day_data"><div _ngcontent-xwr-c114="" class="slider_day"><div _ngcontent-xwr-c114="" id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide"><div _ngcontent-xwr-c114="" class="carousel-indicators"></div><div _ngcontent-xwr-c114="" class="carousel-inner"><div _ngcontent-xwr-c114="" class="carousel-item active"><img _ngcontent-xwr-c114="" class="d-block w-100" src="../../../assets/img/bg_slider.png"></div></div></div></div><div _ngcontent-xwr-c114="" class="media__body py-3"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har">NA</h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><i _ngcontent-xwr-c114="" class="bi bi-boxes" style="color: #2662d9;"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> Service </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi bi-clock-fill"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap"> NA - NA </strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line2"> NA </strong></div><div _ngcontent-xwr-c114=""></div></div></div></div></div></div></div></div><div _ngcontent-xwr-c114="" id="about-pic-modal" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal__md"><div _ngcontent-xwr-c114="" class="modal-content" style="background-color: transparent;"><div _ngcontent-xwr-c114="" class="modal-body"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close" style="float: right;"></button><img _ngcontent-xwr-c114="" class="about-pictues-responsive" src="https://blueberrydatastorage.blob.core.windows.net/crm-data/undefined"></div></div></div></div><div _ngcontent-xwr-c114="" id="" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal-lg Login-_modal"><div _ngcontent-xwr-c114="" class="modal-content"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close"></button><div _ngcontent-xwr-c114="" class="modal-body"><div _ngcontent-xwr-c114="" class="modal_day_data"><div _ngcontent-xwr-c114="" class="slider_day"><div _ngcontent-xwr-c114="" id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide"><div _ngcontent-xwr-c114="" class="carousel-indicators"><button _ngcontent-xwr-c114="" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" class="active"></button><button _ngcontent-xwr-c114="" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button><button _ngcontent-xwr-c114="" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button></div><div _ngcontent-xwr-c114="" class="carousel-inner"><div _ngcontent-xwr-c114="" class="carousel-item active"><img _ngcontent-xwr-c114="" src="https://images.unsplash.com/photo-1543579596-2c11997c7706?ixid=M3wzNTQxNTd8MHwxfHNlYXJjaHwxNXx8ZHViYWl8ZW58MHx8fHwxNzI0Njc0MDA5fDA&amp;ixlib=rb-4.0.3" alt="..." class="d-block w-100"></div><div _ngcontent-xwr-c114="" class="carousel-item"><img _ngcontent-xwr-c114="" src="https://images.unsplash.com/photo-1543579596-2c11997c7706?ixid=M3wzNTQxNTd8MHwxfHNlYXJjaHwxNXx8ZHViYWl8ZW58MHx8fHwxNzI0Njc0MDA5fDA&amp;ixlib=rb-4.0.3" alt="..." class="d-block w-100"></div><div _ngcontent-xwr-c114="" class="carousel-item"><img _ngcontent-xwr-c114="" src="https://images.unsplash.com/photo-1543579596-2c11997c7706?ixid=M3wzNTQxNTd8MHwxfHNlYXJjaHwxNXx8ZHViYWl8ZW58MHx8fHwxNzI0Njc0MDA5fDA&amp;ixlib=rb-4.0.3" alt="..." class="d-block w-100"></div></div><button _ngcontent-xwr-c114="" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" class="carousel-control-prev"><span _ngcontent-xwr-c114="" aria-hidden="true" class="carousel-control-prev-icon"></span><span _ngcontent-xwr-c114="" class="visually-hidden">Previous</span></button><button _ngcontent-xwr-c114="" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" class="carousel-control-next"><span _ngcontent-xwr-c114="" aria-hidden="true" class="carousel-control-next-icon"></span><span _ngcontent-xwr-c114="" class="visually-hidden">Next</span></button></div></div><div _ngcontent-xwr-c114="" class="media__body py-3"><h4 _ngcontent-xwr-c114="" class="ellipsis-one-line_har">Chillout Ice Lounge Dubai</h4><div _ngcontent-xwr-c114="" class="pr3"><div _ngcontent-xwr-c114="" class="common-card-data"><span _ngcontent-xwr-c114="" class="b-type"><i _ngcontent-xwr-c114="" class="bi-person-fill"></i></span><strong _ngcontent-xwr-c114="" class="ws-nowrap">Sightseeing Spot</strong><span _ngcontent-xwr-c114="" class="b-location"><i _ngcontent-xwr-c114="" class="bi-geo-alt-fill"></i></span><strong _ngcontent-xwr-c114="" class="location-ellipses-one-line">Ground Floor - Times Square Center</strong></div><div _ngcontent-xwr-c114="" ng-reflect-ng-class="[object Object]" class="ellipsis-two-lines"> Activity OverviewEscape the UAE heat with this Dubai Chill out Ice Lounge experience. Step inside this popular attraction where you'll be served hot chocolate and some starters at sub-zero temperatures and see what it's like to go from desert dunes to 50 degrees Celsius. </div></div></div></div></div></div></div></div><div _ngcontent-xwr-c114="" id="register-modal" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog Login-_modal"><div _ngcontent-xwr-c114="" class="modal-content"><div _ngcontent-xwr-c114="" class="modal-header"><h4 _ngcontent-xwr-c114="" class="modal-title">Signup to continue</h4><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close"></button></div><div _ngcontent-xwr-c114="" class="modal-body"><div _ngcontent-xwr-c114="" class="loginForm"><form _ngcontent-xwr-c114="" novalidate="" class="ng-untouched ng-pristine ng-valid"><div _ngcontent-xwr-c114="" class="form-group"><label _ngcontent-xwr-c114="" for="exampleInputEmail1">Name</label><input _ngcontent-xwr-c114="" type="text" id="Name" class="form-control"><img _ngcontent-xwr-c114="" src="../../../assets/img/awesome-user.svg" alt="Name" class="icon-form"></div><div _ngcontent-xwr-c114="" class="form-group"><label _ngcontent-xwr-c114="" for="exampleInputPassword1">Mobile Number</label><input _ngcontent-xwr-c114="" type="text" id="Mobile" class="form-control"><img _ngcontent-xwr-c114="" src="../../../assets/img/awesome-mobile.svg" alt="Mobile" class="icon-form mobile"></div><button _ngcontent-xwr-c114="" type="submit" class="btn btn-primary btn-w-100"> Continue </button></form><p _ngcontent-xwr-c114="" class="or-class">OR</p><div _ngcontent-xwr-c114="" class="D_Flex"><input _ngcontent-xwr-c114="" type="checkbox" id="exampleCheck1" class="form-check-input"><p _ngcontent-xwr-c114=""> I agree, to Maatrika's Terms and Conditions and <br _ngcontent-xwr-c114=""><span _ngcontent-xwr-c114="" style="color: #6753bb;">Privacy Policy</span></p></div><p _ngcontent-xwr-c114="" class="last-res"> Already have an account? <span _ngcontent-xwr-c114="" id="test1">Login</span></p></div></div></div></div></div><div _ngcontent-xwr-c114="" id="about-pic-modal2" tabindex="-1" aria-labelledby="about-pic-modalLabel" aria-hidden="true" class="modal fade"><div _ngcontent-xwr-c114="" class="modal-dialog modal-dialog-centered modal-fullscreen"><div _ngcontent-xwr-c114="" class="modal-content" style="background-color: transparent;"><div _ngcontent-xwr-c114="" id="modal-fullscreen" class="modal-body d-flex justify-content-center align-items-center"><button _ngcontent-xwr-c114="" type="button" data-bs-dismiss="modal" class="btn-close" style="position: absolute; top: 10px; right: 10px;"></button><button _ngcontent-xwr-c114="" type="button" class="btn btn-dark" style="position: absolute; top: 10px; left: 10px; z-index: 1000;"> Fullscreen </button><div _ngcontent-xwr-c114="" class="image-counter" style="position: absolute; top: 10px; right: 60px; font-size: 18px; color: white; z-index: 1000;"> 1/0 </div><img _ngcontent-xwr-c114="" class="img-fluid" style="max-height: 100vh; max-width: 100vw; object-fit: contain;" src="../../../assets/img/bg_slider.png"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div></div></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-preview><!--container--></app-root>
+<script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="styles.js" defer=""></script><script src="scripts.js" defer=""></script><script src="vendor.js" type="module"></script><script src="main.js" type="module"></script>
+
+</body>
+</html>`

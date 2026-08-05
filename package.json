@@ -1,0 +1,19 @@
+{
+  "name": "gsr-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo: portfolio site, the GpApp micro-framework, and PDF services.",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev:portfolio": "npm run dev --workspace=@gsr/portfolio",
+    "start:pdf": "npm run start --workspace=@gsr/itinerary-pdf"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "ISC"
+}

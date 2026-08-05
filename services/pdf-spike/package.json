@@ -1,0 +1,14 @@
+{
+  "name": "@gsr/pdf-spike",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "description": "Spike: render a static itinerary page to PDF with Puppeteer.",
+  "dependencies": {
+    "puppeteer": "^24.20.0"
+  }
+}

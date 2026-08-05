@@ -1,0 +1,16 @@
+{
+  "name": "@gsr/gpapp",
+  "version": "1.0.0",
+  "description": "A ~200 line declarative template engine: loops, attribute bindings, HTML components, and event delegation.",
+  "main": "gpapp.js",
+  "files": [
+    "gpapp.js",
+    "README.md"
+  ],
+  "keywords": [
+    "micro-framework",
+    "template-engine",
+    "vanilla-js"
+  ],
+  "license": "ISC"
+}
