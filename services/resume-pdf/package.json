@@ -1,0 +1,20 @@
+{
+  "name": "@gsr/resume-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generates a role-tailored resume PDF on demand with Puppeteer.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "smoke": "node scripts/smoke.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "puppeteer": "^24.20.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "REPLACE_WITH_YOUR_NAME",
+  "title": "Software Engineer",
+  "contact": {
+    "email": "REPLACE_WITH_YOUR_EMAIL",
+    "phone": "REPLACE_WITH_YOUR_PHONE",
+    "location": "REPLACE_WITH_YOUR_CITY",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/REPLACE_ME" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/REPLACE_ME" }
+    ]
+  },
+  "summary": {
+    "frontend": "Frontend-focused engineer building Angular applications - reactive forms, RxJS, component architecture, and design-system consistency.",
+    "backend": "Backend-focused engineer building layered Node.js/Express/Sequelize services - guard-clause validation, idempotent writes, and clean API design.",
+    "fullstack": "Full-stack engineer comfortable across Angular frontends and Node.js/Express/Sequelize backends, from data model to UI."
+  },
+  "skills": [
+    { "name": "Angular", "roles": ["frontend"] },
+    { "name": "RxJS", "roles": ["frontend"] },
+    { "name": "TypeScript", "roles": ["frontend", "backend"] },
+    { "name": "HTML/CSS", "roles": ["frontend"] },
+    { "name": "Node.js / Express", "roles": ["backend"] },
+    { "name": "Sequelize / SQL", "roles": ["backend"] },
+    { "name": "REST API design", "roles": ["frontend", "backend"] },
+    { "name": "Git", "roles": ["frontend", "backend"] }
+  ],
+  "experience": [
+    {
+      "company": "REPLACE_WITH_COMPANY",
+      "role": "REPLACE_WITH_ROLE_TITLE",
+      "period": "REPLACE_WITH_DATES",
+      "bullets": [
+        { "text": "Built and maintained Angular modules with reactive forms and RxJS-driven data flows.", "roles": ["frontend"] },
+        { "text": "Designed layered Node.js/Express/Sequelize services (controller/service/model) for core business modules.", "roles": ["backend"] },
+        { "text": "Owned features end-to-end from data model through UI, coordinating frontend and backend changes.", "roles": ["frontend", "backend"] }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "REPLACE_WITH_PROJECT_NAME",
+      "description": "REPLACE_WITH_ONE_LINE_DESCRIPTION",
+      "roles": ["frontend", "backend"]
+    }
+  ],
+  "education": [
+    {
+      "school": "REPLACE_WITH_SCHOOL",
+      "degree": "REPLACE_WITH_DEGREE",
+      "period": "REPLACE_WITH_DATES"
+    }
+  ]
+}

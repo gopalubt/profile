@@ -1,23 +1,36 @@
 # gsr-workspace
 
-Three projects that previously shared one flat folder, now separated into npm
+Projects that previously shared one flat folder, separated into npm
 workspaces.
 
 ```
-apps/portfolio/          Static portfolio site (GitHub Pages)
+apps/portfolio/          Static portfolio site (GitHub Pages) - GpApp-based, v1
+apps/portfolio-next/     Next.js portfolio site (v2) - home/about/contact/projects/blog
 packages/gpapp/          GpApp - a ~290 line declarative template engine
-services/itinerary-pdf/  Express + Sequelize + Puppeteer PDF generator
+services/itinerary-pdf/  Express + Sequelize + Puppeteer PDF generator (travel itineraries)
+services/resume-pdf/     Express + Puppeteer service - role-tailored resume PDF on demand
 services/pdf-spike/      Standalone Puppeteer spike
 ```
+
+`apps/portfolio-next` is the actively developed site. `apps/portfolio` (GpApp)
+is kept as-is rather than deleted - retire it once the Next.js site is live
+and DNS/Pages config has moved over.
 
 ## Quick start
 
 ```bash
 npm install                       # installs every workspace
 
-npm run dev:portfolio             # serves the site on http://localhost:3000
+npm run dev:portfolio             # v1 site on http://localhost:3000
+npm run dev:portfolio-next        # v2 (Next.js) site on http://localhost:3000
+npm run start:resume-pdf          # resume PDF service on http://localhost:4001
+npm run smoke:resume-pdf          # 10 checks, no Chromium needed
 npm run smoke --workspace=@gsr/itinerary-pdf   # 17 checks, no Chromium needed
 ```
+
+See [`apps/portfolio-next/README.md`](apps/portfolio-next/README.md) and
+[`services/resume-pdf/README.md`](services/resume-pdf/README.md) for setup
+specific to each (Firebase credentials, Resend API key, etc).
 
 ---
 

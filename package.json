@@ -10,7 +10,10 @@
   ],
   "scripts": {
     "dev:portfolio": "npm run dev --workspace=@gsr/portfolio",
-    "start:pdf": "npm run start --workspace=@gsr/itinerary-pdf"
+    "start:pdf": "npm run start --workspace=@gsr/itinerary-pdf",
+    "dev:portfolio-next": "npm run dev --workspace=@gsr/portfolio-next",
+    "start:resume-pdf": "npm run start --workspace=@gsr/resume-pdf",
+    "smoke:resume-pdf": "npm run smoke --workspace=@gsr/resume-pdf"
   },
   "engines": {
     "node": ">=20"
